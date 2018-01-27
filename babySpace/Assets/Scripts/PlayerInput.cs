@@ -8,6 +8,8 @@ public class PlayerInput : MonoBehaviour {
 
     private float moveX;
     private float moveY;
+    private bool actionButton;
+    private bool teleportButton;
 	// Use this for initialization
 	void Start () {
         if(PlayerInput.Instance == null)
@@ -48,11 +50,29 @@ public class PlayerInput : MonoBehaviour {
         }
     }
 
+    public bool ActionButton
+    {
+        get
+        {
+            return actionButton;
+        }
+    }
+
+    public bool TeleportButton
+    {
+        get
+        {
+            return teleportButton;
+        }
+    }
 
     // Update is called once per frame
     void Update () {
 		moveX = Input.GetAxisRaw("Horizontal");
         moveY = Input.GetAxisRaw("Vertical");
+        actionButton = Input.GetButtonDown("Jump");
+        teleportButton = Input.GetKeyDown(KeyCode.T);
+
 
         //Debug.Log("MoveX: " + moveX);
         //Debug.Log("MoveY: " + moveY);

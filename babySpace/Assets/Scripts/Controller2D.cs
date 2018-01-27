@@ -8,6 +8,8 @@ public class Controller2D : MonoBehaviour {
 
     [SerializeField]
     private float walk_speed;
+    [SerializeField]
+    private Transform warpPoint;
 
     private Collider2D playerCollider;
     private Rigidbody2D playerRigidBody;
@@ -29,9 +31,17 @@ public class Controller2D : MonoBehaviour {
         playerRigidBody.MovePosition(playerRigidBody.position + (PlayerInput.Instance.MoveDirection * walk_speed * Time.fixedDeltaTime));
         anim.SetFloat("MoveX", PlayerInput.Instance.MoveX);
         anim.SetFloat("MoveY", PlayerInput.Instance.MoveY);
+        if (PlayerInput.Instance.ActionButton)
+        {
+            SearchAction();
+        }
+        if (PlayerInput.Instance.TeleportButton)
+        {
+            anim.Play("anim_warp");
+        }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void PegarItem(Collider2D collision)
     {
         if(collision.tag == "PickUpItem")
         {
@@ -80,6 +90,29 @@ public class Controller2D : MonoBehaviour {
     {
         Debug.Log("Peguei um console carai");
       //  item.BeTaken();
+
+    }
+
+    public void SearchAction()
+    {
+        Collider2D objetoPerto = Physics2D.OverlapCircle(transform.position, 1.6f, LayerMask.GetMask("ActionLayer"));
+        if (objetoPerto != null)
+        {
+            if(objetoPerto.tag == "PickUpItem")
+            {
+                PegarItem(objetoPerto);
+            }
+        }
+        else
+        {
+            Debug.Log("nada perto");
+        }
+    }
+
+    private void Teleport()
+    {
+        transform.position = warpPoint.position;
+        anim.SetTrigger("FinishTeleport");
 
     }
 }
