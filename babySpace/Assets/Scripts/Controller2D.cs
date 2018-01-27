@@ -14,6 +14,7 @@ public class Controller2D : MonoBehaviour {
     private Collider2D playerCollider;
     private Rigidbody2D playerRigidBody;
     private Animator anim;
+    public TipoItem cribPart = TipoItem.vazio;
 
 	// Use this for initialization
 	void Start () {
@@ -21,6 +22,14 @@ public class Controller2D : MonoBehaviour {
         playerRigidBody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 	}
+
+
+    public TipoItem GetCribPart
+    {
+        get {
+            return cribPart;
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -63,14 +72,18 @@ public class Controller2D : MonoBehaviour {
                     break;
 
             }
-            itemPego.BeTaken();
         }
     }
 
     private void PegarPart(PickupItem item)
     {
-        Debug.Log("Peguei uma peça carai");
-        item.BeTaken();
+        if(cribPart == TipoItem.vazio)
+        {
+            Debug.Log("Peguei uma peça carai");
+            cribPart = item.Item;
+            item.BeTaken();
+        }
+
     }
 
     private void PegarAntena(PickupItem item)
@@ -93,6 +106,7 @@ public class Controller2D : MonoBehaviour {
 
     }
 
+
     public void SearchAction()
     {
         Collider2D objetoPerto = Physics2D.OverlapCircle(transform.position, 1.6f, LayerMask.GetMask("ActionLayer"));
@@ -102,10 +116,23 @@ public class Controller2D : MonoBehaviour {
             {
                 PegarItem(objetoPerto);
             }
+            else if(objetoPerto.tag == "SpaceCrib")
+            {
+                ActionNave(objetoPerto.GetComponent<SpaceCrib>());
+            }
         }
         else
         {
             Debug.Log("nada perto");
+        }
+    }
+
+    private void ActionNave(SpaceCrib nave)
+    {
+        if (cribPart != TipoItem.vazio)
+        {
+            nave.AttachPart(cribPart);
+            cribPart = TipoItem.vazio;
         }
     }
 
