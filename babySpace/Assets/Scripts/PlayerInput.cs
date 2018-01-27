@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour {
 
-    public static PlayerInput Instance = null;
+    private static PlayerInput instance = null;
 
     private float moveX;
     private float moveY;
@@ -12,9 +12,9 @@ public class PlayerInput : MonoBehaviour {
     private bool teleportButton;
 	// Use this for initialization
 	void Start () {
-        if(PlayerInput.Instance == null)
+        if(instance == null)
         {
-            PlayerInput.Instance = this;
+            instance = this;
         }
         else
         {
@@ -26,6 +26,14 @@ public class PlayerInput : MonoBehaviour {
         moveX = 0;
         moveY = 0;
 	}
+
+    public static PlayerInput Instance
+    {
+        get
+        {
+            return instance;
+        }
+    }
 
     public Vector2 MoveDirection
     {

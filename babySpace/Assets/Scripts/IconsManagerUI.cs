@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class IconsManagerUI : MonoBehaviour {
 
 
-	public Image motorIcon;
-	public Image fuelIcon;
-	public Image mirrorIcon;
-	public Text posTextUI;
+    private static IconsManagerUI instance = null;
+
+	public  Image motorIcon;
+	public  Image fuelIcon;
+	public  Image mirrorIcon;
+	public  Text posTextUI;
 
 	public bool m_gotMotor;
 	public bool m_gotFuel;
@@ -20,8 +22,54 @@ public class IconsManagerUI : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this);
+            Debug.Log("Trying to create 2 IconManager");
+        }
+
 		player = GameObject.FindGameObjectWithTag("Player");
 	}
+
+
+    public static IconsManagerUI Instance
+    {
+        get
+        {
+            return instance;
+        }
+    }
+
+
+    public void GetPart(TipoItem part)
+    {
+        switch (part)
+        {
+            case TipoItem.motor:
+                Debug.Log("Motor");
+                m_gotMotor = true;
+                break;
+
+            case TipoItem.combustivel:
+                Debug.Log("fuel");
+                m_gotFuel = true;
+                break;
+
+            case TipoItem.espelho:
+                Debug.Log("mirror");
+
+                m_gotMirror = true;
+                break;
+
+            default:
+                Debug.Log("Erro! Objeto não é uma parte da nave!");
+                break;
+        }
+    }
 	
 	// Update is called once per frame
 	void Update ()
