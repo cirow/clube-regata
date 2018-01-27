@@ -11,7 +11,7 @@ public class AudioManager : MonoBehaviour {
 	public AudioClip[] detectAudios;
 	public AudioClip interfAudio;
 	public bool win;
-	public bool haveEquip;
+	public bool dontHaveEquip;
 
 	private AudioSource[] audioSources;
 	private LevelManager levelManager;
@@ -104,16 +104,16 @@ public class AudioManager : MonoBehaviour {
 		}
 	}
 
-	public void BeepingAudio(bool play)
+	public void InterfAudio(bool play)
 	{
 		if (play)
 		{
-			audioSources[2].clip = detectAudios[0];
+			audioSources[2].clip = interfAudio;
 			if (audioSources[2].isPlaying)
 			{
 				audioSources[2].Stop();
 				audioSources[2].Play();
-				audioSources[2].volume = 0.03f;
+				audioSources[2].volume = 0.5f;
 			}
 			else
 			{
@@ -139,10 +139,6 @@ public class AudioManager : MonoBehaviour {
 		{
 			levelManager.LoadLevel("Win");
 			win = false;
-		}
-		if(haveEquip)
-		{
-			BeepingAudio(true);
 		}
 	}
 }

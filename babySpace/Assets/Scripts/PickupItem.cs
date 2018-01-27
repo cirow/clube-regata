@@ -11,8 +11,8 @@ public enum ItemDetectSound { motor, combustivel, espelho}
 public class PickupItem : MonoBehaviour {
 
     [SerializeField]
-    private AudioClip audioEffect;
-    private Collider2D collisionRadius;
+    protected AudioClip audioEffect;
+    protected Collider2D collisionRadius;
 
     [SerializeField]
     private TipoItem item;
