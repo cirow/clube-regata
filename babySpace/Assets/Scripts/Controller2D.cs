@@ -14,25 +14,60 @@ public class Controller2D : MonoBehaviour {
     private Collider2D playerCollider;
     private Rigidbody2D playerRigidBody;
     private Animator anim;
+    public TipoItem cribPart = TipoItem.vazio;
 
 	public int numberEquip = 0;
 	public bool playBeep = true;
 	// Use this for initialization
-	void Start () {
+
+    private float mfaceX = 1;
+    private float mfaceY = 1;
+
+    // Use this for initialization
+    void Start () {
         playerCollider = GetComponent<Collider2D>();
         playerRigidBody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 	}
+
+
+    public TipoItem GetCribPart
+    {
+        get {
+            return cribPart;
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
-      //  playerRigidBody.velocity = new Vector2(PlayerInput.Instance.MoveX, PlayerInput.Instance.MoveY);
-	}
+        //  playerRigidBody.velocity = new Vector2(PlayerInput.Instance.MoveX, PlayerInput.Instance.MoveY);
+
+        //anim.SetFloat("MoveX", PlayerInput.Instance.MoveX);
+        //anim.SetFloat("MoveY", PlayerInput.Instance.MoveY);
+
+        if ((PlayerInput.Instance.MoveX != 0) || (PlayerInput.Instance.MoveY != 0))
+        {
+            anim.SetBool("walking", true);
+            anim.SetFloat("MoveX", PlayerInput.Instance.MoveX);
+            anim.SetFloat("MoveY", PlayerInput.Instance.MoveY);
+            UpdateFace();
+
+
+        }
+        else
+        {
+            anim.SetBool("walking", false);
+
+        }
+
+    }
     private void FixedUpdate()
     {
         playerRigidBody.MovePosition(playerRigidBody.position + (PlayerInput.Instance.MoveDirection * walk_speed * Time.fixedDeltaTime));
-        anim.SetFloat("MoveX", PlayerInput.Instance.MoveX);
-        anim.SetFloat("MoveY", PlayerInput.Instance.MoveY);
+
+
+
+
         if (PlayerInput.Instance.ActionButton)
         {
             SearchAction();
@@ -94,14 +129,18 @@ private void PegarItem(Collider2D collision)
                     break;
 
             }
-            itemPego.BeTaken();
         }
     }
 
     private void PegarPart(PickupItem item)
     {
-        Debug.Log("Peguei uma peça carai");
-        item.BeTaken();
+        if(cribPart == TipoItem.vazio)
+        {
+            Debug.Log("Peguei uma peça carai");
+            cribPart = item.Item;
+            item.BeTaken();
+        }
+
     }
 
     private void PegarAntena(PickupItem item)
@@ -124,6 +163,7 @@ private void PegarItem(Collider2D collision)
 
     }
 
+
     public void SearchAction()
     {
         Collider2D objetoPerto = Physics2D.OverlapCircle(transform.position, 1.6f, LayerMask.GetMask("ActionLayer"));
@@ -133,6 +173,10 @@ private void PegarItem(Collider2D collision)
             {
                 PegarItem(objetoPerto);
             }
+            else if(objetoPerto.tag == "SpaceCrib")
+            {
+                ActionNave(objetoPerto.GetComponent<SpaceCrib>());
+            }
         }
         else
         {
@@ -140,10 +184,51 @@ private void PegarItem(Collider2D collision)
         }
     }
 
+    private void ActionNave(SpaceCrib nave)
+    {
+        if (cribPart != TipoItem.vazio)
+        {
+            nave.AttachPart(cribPart);
+            cribPart = TipoItem.vazio;
+        }
+    }
+
     private void Teleport()
     {
         transform.position = warpPoint.position;
         anim.SetTrigger("FinishTeleport");
+
+    }
+
+    private void UpdateFace()
+    {
+
+        if(PlayerInput.Instance.MoveX == 1)
+        {
+            mfaceX = 1;
+        }
+        else if(PlayerInput.Instance.MoveX == -1)
+        {
+            mfaceX = -1;
+        }
+
+        if (PlayerInput.Instance.MoveY == 1)
+        {
+            mfaceY = 1;
+        }
+        else if (PlayerInput.Instance.MoveY == -1)
+        {
+            mfaceY = -1;
+        }
+
+        if(PlayerInput.Instance.MoveX != 0 && PlayerInput.Instance.MoveY == 0)
+        {
+            mfaceX = PlayerInput.Instance.MoveX;
+            mfaceY = -1;
+        }
+
+        anim.SetFloat("faceX", mfaceX);
+        anim.SetFloat("faceY", mfaceY);
 
     }
 }

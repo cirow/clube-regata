@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum TipoItem {
-    capacete, antena, console, motor, combustivel, espelho
+    capacete, antena, console, motor, combustivel, espelho, vazio
 }
 
 public enum ItemDetectSound { motor, combustivel, espelho}

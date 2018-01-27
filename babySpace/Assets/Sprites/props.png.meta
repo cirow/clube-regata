@@ -1,25 +1,27 @@
 fileFormatVersion: 2
-guid: 05b25a45ff63db14f991920dc60bf343
-timeCreated: 1517078790
+guid: 76880aeb14a8e5e43af1cd32217f6c4e
+timeCreated: 1517080861
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: walkingFullequip_spritesheet_0
-    21300002: walkingFullequip_spritesheet_1
-    21300004: walkingFullequip_spritesheet_2
-    21300006: walkingFullequip_spritesheet_3
-    21300008: walkingFullequip_spritesheet_4
-    21300010: walkingFullequip_spritesheet_5
-    21300012: walkingFullequip_spritesheet_6
-    21300014: walkingFullequip_spritesheet_7
-    21300016: walkingFullequip_spritesheet_8
-    21300018: walkingFullequip_spritesheet_9
-    21300020: walkingFullequip_spritesheet_10
-    21300022: walkingFullequip_spritesheet_11
-    21300024: walkingFullequip_spritesheet_12
-    21300026: walkingFullequip_spritesheet_13
-    21300028: walkingFullequip_spritesheet_14
-    21300030: walkingFullequip_spritesheet_15
+    21300000: props_0
+    21300002: props_1
+    21300004: props_2
+    21300006: props_3
+    21300008: props_4
+    21300010: props_5
+    21300012: props_6
+    21300014: props_7
+    21300016: props_8
+    21300018: props_9
+    21300020: props_10
+    21300022: props_11
+    21300024: props_12
+    21300026: props_13
+    21300028: props_14
+    21300030: props_15
+    21300032: props_16
+    21300034: props_17
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -47,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -62,7 +64,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -116,225 +118,253 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walkingFullequip_spritesheet_0
+      name: props_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 162
-        width: 101
-        height: 128
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: walkingFullequip_spritesheet_1
+      name: props_1
       rect:
         serializedVersion: 2
-        x: 146
-        y: 162
-        width: 91
-        height: 126
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 65
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: walkingFullequip_spritesheet_2
+      name: props_2
       rect:
         serializedVersion: 2
-        x: 267
-        y: 162
-        width: 86
-        height: 128
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 129
+        y: 256
+        width: 63
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: walkingFullequip_spritesheet_3
+      name: props_3
       rect:
         serializedVersion: 2
-        x: 376
-        y: 162
-        width: 91
-        height: 126
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 192
+        y: 256
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: walkingFullequip_spritesheet_4
+      name: props_4
       rect:
         serializedVersion: 2
-        x: 492
-        y: 158
-        width: 91
-        height: 126
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: walkingFullequip_spritesheet_5
+      name: props_5
       rect:
         serializedVersion: 2
-        x: 606
-        y: 158
-        width: 86
-        height: 128
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 65
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: walkingFullequip_spritesheet_6
+      name: props_6
       rect:
         serializedVersion: 2
-        x: 722
-        y: 158
-        width: 91
-        height: 126
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 129
+        y: 192
+        width: 63
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: walkingFullequip_spritesheet_7
+      name: props_7
       rect:
         serializedVersion: 2
-        x: 845
-        y: 160
-        width: 87
-        height: 126
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 192
+        y: 192
+        width: 127
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: walkingFullequip_spritesheet_8
+      name: props_8
       rect:
         serializedVersion: 2
-        x: 32
-        y: 12
-        width: 81
-        height: 125
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: walkingFullequip_spritesheet_9
+      name: props_9
       rect:
         serializedVersion: 2
-        x: 157
-        y: 12
-        width: 80
-        height: 122
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 65
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: walkingFullequip_spritesheet_10
+      name: props_10
       rect:
         serializedVersion: 2
-        x: 272
-        y: 12
-        width: 81
-        height: 125
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 129
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: walkingFullequip_spritesheet_11
+      name: props_11
       rect:
         serializedVersion: 2
-        x: 387
-        y: 12
-        width: 80
-        height: 122
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 192
+        y: 128
+        width: 127
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: walkingFullequip_spritesheet_12
+      name: props_12
       rect:
         serializedVersion: 2
-        x: 482
-        y: 13
-        width: 80
-        height: 122
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: walkingFullequip_spritesheet_13
+      name: props_13
       rect:
         serializedVersion: 2
-        x: 596
-        y: 13
-        width: 81
-        height: 125
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 65
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: walkingFullequip_spritesheet_14
+      name: props_14
       rect:
         serializedVersion: 2
-        x: 712
-        y: 13
-        width: 80
-        height: 122
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 129
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: walkingFullequip_spritesheet_15
+      name: props_15
       rect:
         serializedVersion: 2
-        x: 836
-        y: 13
-        width: 81
-        height: 125
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: props_16
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: props_17
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 0
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

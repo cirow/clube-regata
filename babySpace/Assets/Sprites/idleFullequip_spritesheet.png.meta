@@ -1,25 +1,21 @@
 fileFormatVersion: 2
-guid: 05b25a45ff63db14f991920dc60bf343
-timeCreated: 1517078790
+guid: 0c16a85a6994eb5429ed43e205d8570e
+timeCreated: 1517082390
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: walkingFullequip_spritesheet_0
-    21300002: walkingFullequip_spritesheet_1
-    21300004: walkingFullequip_spritesheet_2
-    21300006: walkingFullequip_spritesheet_3
-    21300008: walkingFullequip_spritesheet_4
-    21300010: walkingFullequip_spritesheet_5
-    21300012: walkingFullequip_spritesheet_6
-    21300014: walkingFullequip_spritesheet_7
-    21300016: walkingFullequip_spritesheet_8
-    21300018: walkingFullequip_spritesheet_9
-    21300020: walkingFullequip_spritesheet_10
-    21300022: walkingFullequip_spritesheet_11
-    21300024: walkingFullequip_spritesheet_12
-    21300026: walkingFullequip_spritesheet_13
-    21300028: walkingFullequip_spritesheet_14
-    21300030: walkingFullequip_spritesheet_15
+    21300000: idleFullequip_spritesheet_0
+    21300002: idleFullequip_spritesheet_1
+    21300004: idleFullequip_spritesheet_2
+    21300006: idleFullequip_spritesheet_3
+    21300008: idleFullequip_spritesheet_4
+    21300010: idleFullequip_spritesheet_5
+    21300012: idleFullequip_spritesheet_6
+    21300014: idleFullequip_spritesheet_7
+    21300016: idleFullequip_spritesheet_8
+    21300018: idleFullequip_spritesheet_9
+    21300020: idleFullequip_spritesheet_10
+    21300022: idleFullequip_spritesheet_11
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -116,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walkingFullequip_spritesheet_0
+      name: idleFullequip_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 162
-        width: 101
-        height: 128
+        x: 47
+        y: 170
+        width: 85
+        height: 125
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,12 +126,12 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: walkingFullequip_spritesheet_1
+      name: idleFullequip_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 146
-        y: 162
-        width: 91
+        x: 168
+        y: 170
+        width: 85
         height: 126
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -144,13 +140,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: walkingFullequip_spritesheet_2
+      name: idleFullequip_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 267
-        y: 162
-        width: 86
-        height: 128
+        x: 288
+        y: 170
+        width: 85
+        height: 122
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,12 +154,26 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: walkingFullequip_spritesheet_3
+      name: idleFullequip_spritesheet_3
       rect:
         serializedVersion: 2
-        x: 376
-        y: 162
-        width: 91
+        x: 405
+        y: 170
+        width: 85
+        height: 122
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idleFullequip_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 170
+        width: 85
         height: 126
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -172,13 +182,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: walkingFullequip_spritesheet_4
+      name: idleFullequip_spritesheet_5
       rect:
         serializedVersion: 2
-        x: 492
-        y: 158
-        width: 91
-        height: 126
+        x: 646
+        y: 170
+        width: 85
+        height: 125
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,53 +196,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: walkingFullequip_spritesheet_5
+      name: idleFullequip_spritesheet_6
       rect:
         serializedVersion: 2
-        x: 606
-        y: 158
-        width: 86
-        height: 128
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: walkingFullequip_spritesheet_6
-      rect:
-        serializedVersion: 2
-        x: 722
-        y: 158
-        width: 91
-        height: 126
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: walkingFullequip_spritesheet_7
-      rect:
-        serializedVersion: 2
-        x: 845
-        y: 160
-        width: 87
-        height: 126
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: walkingFullequip_spritesheet_8
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 12
+        x: 47
+        y: 23
         width: 81
         height: 125
       alignment: 7
@@ -242,13 +210,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: walkingFullequip_spritesheet_9
+      name: idleFullequip_spritesheet_7
       rect:
         serializedVersion: 2
-        x: 157
-        y: 12
+        x: 169
+        y: 23
         width: 80
-        height: 122
+        height: 126
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,27 +224,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: walkingFullequip_spritesheet_10
+      name: idleFullequip_spritesheet_8
       rect:
         serializedVersion: 2
-        x: 272
-        y: 12
-        width: 81
-        height: 125
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: walkingFullequip_spritesheet_11
-      rect:
-        serializedVersion: 2
-        x: 387
-        y: 12
+        x: 289
+        y: 23
         width: 80
-        height: 122
+        height: 123
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,13 +238,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: walkingFullequip_spritesheet_12
+      name: idleFullequip_spritesheet_9
       rect:
         serializedVersion: 2
-        x: 482
-        y: 13
+        x: 409
+        y: 23
         width: 80
-        height: 122
+        height: 123
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -298,27 +252,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: walkingFullequip_spritesheet_13
+      name: idleFullequip_spritesheet_10
       rect:
         serializedVersion: 2
-        x: 596
-        y: 13
-        width: 81
-        height: 125
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: walkingFullequip_spritesheet_14
-      rect:
-        serializedVersion: 2
-        x: 712
-        y: 13
+        x: 529
+        y: 23
         width: 80
-        height: 122
+        height: 126
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -326,11 +266,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: walkingFullequip_spritesheet_15
+      name: idleFullequip_spritesheet_11
       rect:
         serializedVersion: 2
-        x: 836
-        y: 13
+        x: 650
+        y: 23
         width: 81
         height: 125
       alignment: 7
