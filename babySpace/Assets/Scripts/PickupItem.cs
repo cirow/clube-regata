@@ -34,7 +34,7 @@ public class PickupItem : MonoBehaviour {
 		
 	}
 
-    public void BeTaken()
+    public virtual void BeTaken()
     {
         Debug.Log("I just got taken!");
         Destroy(gameObject);

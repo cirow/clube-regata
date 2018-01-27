@@ -59,7 +59,7 @@ public class Controller2D : MonoBehaviour {
                     PegarConsole(itemPego);
                     break;
                 default:
-                    PegarPeça(itemPego);
+                    PegarPart(itemPego);
                     break;
 
             }
@@ -67,10 +67,10 @@ public class Controller2D : MonoBehaviour {
         }
     }
 
-    private void PegarPeça(PickupItem item)
+    private void PegarPart(PickupItem item)
     {
         Debug.Log("Peguei uma peça carai");
-       // item.BeTaken();
+        item.BeTaken();
     }
 
     private void PegarAntena(PickupItem item)
