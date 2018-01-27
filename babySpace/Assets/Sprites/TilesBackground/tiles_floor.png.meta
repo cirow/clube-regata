@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d10c61288121039418f7f19ca0586fe5
-timeCreated: 1517056435
+timeCreated: 1517067162
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -49,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -64,7 +64,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 63
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -101,8 +101,8 @@ TextureImporter:
       name: tiles_floor_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 132
+        x: 1
+        y: 131
         width: 64
         height: 64
       alignment: 0
@@ -115,8 +115,8 @@ TextureImporter:
       name: tiles_floor_1
       rect:
         serializedVersion: 2
-        x: 65
-        y: 132
+        x: 66
+        y: 131
         width: 64
         height: 64
       alignment: 0
@@ -129,8 +129,8 @@ TextureImporter:
       name: tiles_floor_2
       rect:
         serializedVersion: 2
-        x: 130
-        y: 132
+        x: 131
+        y: 131
         width: 64
         height: 64
       alignment: 0
@@ -143,8 +143,8 @@ TextureImporter:
       name: tiles_floor_3
       rect:
         serializedVersion: 2
-        x: 195
-        y: 132
+        x: 196
+        y: 131
         width: 64
         height: 64
       alignment: 0
@@ -157,8 +157,8 @@ TextureImporter:
       name: tiles_floor_4
       rect:
         serializedVersion: 2
-        x: 260
-        y: 132
+        x: 261
+        y: 131
         width: 64
         height: 64
       alignment: 0
@@ -171,8 +171,8 @@ TextureImporter:
       name: tiles_floor_5
       rect:
         serializedVersion: 2
-        x: 325
-        y: 132
+        x: 326
+        y: 131
         width: 64
         height: 64
       alignment: 0
@@ -185,8 +185,8 @@ TextureImporter:
       name: tiles_floor_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 67
+        x: 1
+        y: 66
         width: 64
         height: 64
       alignment: 0
@@ -199,8 +199,8 @@ TextureImporter:
       name: tiles_floor_7
       rect:
         serializedVersion: 2
-        x: 65
-        y: 67
+        x: 66
+        y: 66
         width: 64
         height: 64
       alignment: 0
@@ -213,8 +213,8 @@ TextureImporter:
       name: tiles_floor_8
       rect:
         serializedVersion: 2
-        x: 130
-        y: 67
+        x: 131
+        y: 66
         width: 64
         height: 64
       alignment: 0
@@ -227,8 +227,8 @@ TextureImporter:
       name: tiles_floor_9
       rect:
         serializedVersion: 2
-        x: 195
-        y: 67
+        x: 196
+        y: 66
         width: 64
         height: 64
       alignment: 0
@@ -241,8 +241,8 @@ TextureImporter:
       name: tiles_floor_10
       rect:
         serializedVersion: 2
-        x: 260
-        y: 67
+        x: 261
+        y: 66
         width: 64
         height: 64
       alignment: 0
@@ -255,8 +255,8 @@ TextureImporter:
       name: tiles_floor_11
       rect:
         serializedVersion: 2
-        x: 325
-        y: 67
+        x: 326
+        y: 66
         width: 64
         height: 64
       alignment: 0
@@ -269,8 +269,8 @@ TextureImporter:
       name: tiles_floor_12
       rect:
         serializedVersion: 2
-        x: 390
-        y: 67
+        x: 391
+        y: 66
         width: 64
         height: 64
       alignment: 0
@@ -283,8 +283,8 @@ TextureImporter:
       name: tiles_floor_13
       rect:
         serializedVersion: 2
-        x: 455
-        y: 67
+        x: 456
+        y: 66
         width: 64
         height: 64
       alignment: 0
@@ -297,8 +297,8 @@ TextureImporter:
       name: tiles_floor_14
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2
+        x: 1
+        y: 1
         width: 64
         height: 64
       alignment: 0
@@ -311,8 +311,8 @@ TextureImporter:
       name: tiles_floor_15
       rect:
         serializedVersion: 2
-        x: 67
-        y: 2
+        x: 66
+        y: 1
         width: 64
         height: 64
       alignment: 0
@@ -325,8 +325,8 @@ TextureImporter:
       name: tiles_floor_16
       rect:
         serializedVersion: 2
-        x: 132
-        y: 2
+        x: 131
+        y: 1
         width: 64
         height: 64
       alignment: 0
@@ -339,8 +339,8 @@ TextureImporter:
       name: tiles_floor_17
       rect:
         serializedVersion: 2
-        x: 195
-        y: 2
+        x: 196
+        y: 1
         width: 64
         height: 64
       alignment: 0
