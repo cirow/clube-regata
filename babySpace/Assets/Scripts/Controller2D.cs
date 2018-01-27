@@ -48,7 +48,7 @@ public class Controller2D : MonoBehaviour {
             PickupItem itemPego = collision.gameObject.GetComponent<PickupItem>();
 
             switch (itemPego.Item) {
-                case TipoItem.anteta:
+                case TipoItem.antena:
                     PegarAntena(itemPego);
                     break;
 

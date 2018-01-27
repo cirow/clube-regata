@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum TipoItem {
-    capacete, anteta, console, motor, combustivel, espelho
+    capacete, antena, console, motor, combustivel, espelho
 }
+
+public enum ItemDetectSound { motor, combustivel, espelho}
 
 public class PickupItem : MonoBehaviour {
 

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33248030861977402}
   - component: {fileID: 23797266108093466}
   - component: {fileID: 61782709869221540}
+  - component: {fileID: 114937720612530002}
   m_Layer: 0
   m_Name: PickUpable Item
   m_TagString: PickUpItem
@@ -108,3 +109,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 2.5}
   m_EdgeRadius: 0
+--- !u!114 &114937720612530002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1193339343683680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b053ed71ed34574084e0824629c9b5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioEffect: {fileID: 0}
+  item: 0
