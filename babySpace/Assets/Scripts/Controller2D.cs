@@ -15,6 +15,8 @@ public class Controller2D : MonoBehaviour {
     private Rigidbody2D playerRigidBody;
     private Animator anim;
 
+	public int numberEquip = 0;
+	public bool playBeep = true;
 	// Use this for initialization
 	void Start () {
         playerCollider = GetComponent<Collider2D>();
@@ -39,9 +41,19 @@ public class Controller2D : MonoBehaviour {
         {
             anim.Play("anim_warp");
         }
-    }
 
-    private void PegarItem(Collider2D collision)
+	}
+
+	void GotAllEquips ()
+	{
+		//Tem todo o equipamento entao toca o audio da interferencia
+		//Destroi colisores que limitam o inicio
+		GameObject tempColliders = GameObject.FindGameObjectWithTag("Limit");
+		Destroy(tempColliders);
+		AudioManager.instance.InterfAudio(true);
+	}
+
+private void PegarItem(Collider2D collision)
     {
         if(collision.tag == "PickUpItem")
         {
@@ -49,13 +61,32 @@ public class Controller2D : MonoBehaviour {
 
             switch (itemPego.Item) {
                 case TipoItem.antena:
-                    PegarAntena(itemPego);
+					numberEquip++;
+					if (numberEquip >= 3)
+					{
+						playBeep = false;
+						GotAllEquips();
+					}
+					PegarAntena(itemPego);
                     break;
 
                 case TipoItem.capacete:
-                    PegarCapacete(itemPego);
+					numberEquip++;
+					if (numberEquip >= 3)
+					{
+						playBeep = false;
+						GotAllEquips();
+					}
+					PegarCapacete(itemPego);
                     break;
                 case TipoItem.console:
+					numberEquip++;
+					if(numberEquip >= 3)
+					{
+
+						playBeep = false;
+						GotAllEquips();
+					}
                     PegarConsole(itemPego);
                     break;
                 default:

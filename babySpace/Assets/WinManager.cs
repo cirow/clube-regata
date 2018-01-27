@@ -8,7 +8,7 @@ public class WinManager : MonoBehaviour {
 	void Start ()
 	{
 		AudioManager.instance.WindAudio(false);
-		AudioManager.instance.BeepingAudio(false);
+		AudioManager.instance.InterfAudio(false);
 		AudioManager.instance.VictoryAudio(true);
 	}
 	

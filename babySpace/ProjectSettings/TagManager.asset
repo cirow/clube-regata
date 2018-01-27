@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PickUpItem
   - LevelManager
+  - Limit
   layers:
   - Default
   - TransparentFX
