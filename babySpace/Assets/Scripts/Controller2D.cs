@@ -16,8 +16,12 @@ public class Controller2D : MonoBehaviour {
     private Animator anim;
     public TipoItem cribPart = TipoItem.vazio;
 
-	// Use this for initialization
-	void Start () {
+
+    private float mfaceX = 1;
+    private float mfaceY = 1;
+
+    // Use this for initialization
+    void Start () {
         playerCollider = GetComponent<Collider2D>();
         playerRigidBody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -33,13 +37,34 @@ public class Controller2D : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-      //  playerRigidBody.velocity = new Vector2(PlayerInput.Instance.MoveX, PlayerInput.Instance.MoveY);
-	}
+        //  playerRigidBody.velocity = new Vector2(PlayerInput.Instance.MoveX, PlayerInput.Instance.MoveY);
+
+        //anim.SetFloat("MoveX", PlayerInput.Instance.MoveX);
+        //anim.SetFloat("MoveY", PlayerInput.Instance.MoveY);
+
+        if ((PlayerInput.Instance.MoveX != 0) || (PlayerInput.Instance.MoveY != 0))
+        {
+            anim.SetBool("walking", true);
+            anim.SetFloat("MoveX", PlayerInput.Instance.MoveX);
+            anim.SetFloat("MoveY", PlayerInput.Instance.MoveY);
+            UpdateFace();
+
+
+        }
+        else
+        {
+            anim.SetBool("walking", false);
+
+        }
+
+    }
     private void FixedUpdate()
     {
         playerRigidBody.MovePosition(playerRigidBody.position + (PlayerInput.Instance.MoveDirection * walk_speed * Time.fixedDeltaTime));
-        anim.SetFloat("MoveX", PlayerInput.Instance.MoveX);
-        anim.SetFloat("MoveY", PlayerInput.Instance.MoveY);
+
+
+
+
         if (PlayerInput.Instance.ActionButton)
         {
             SearchAction();
@@ -140,6 +165,38 @@ public class Controller2D : MonoBehaviour {
     {
         transform.position = warpPoint.position;
         anim.SetTrigger("FinishTeleport");
+
+    }
+
+    private void UpdateFace()
+    {
+
+        if(PlayerInput.Instance.MoveX == 1)
+        {
+            mfaceX = 1;
+        }
+        else if(PlayerInput.Instance.MoveX == -1)
+        {
+            mfaceX = -1;
+        }
+
+        if (PlayerInput.Instance.MoveY == 1)
+        {
+            mfaceY = 1;
+        }
+        else if (PlayerInput.Instance.MoveY == -1)
+        {
+            mfaceY = -1;
+        }
+
+        if(PlayerInput.Instance.MoveX != 0 && PlayerInput.Instance.MoveY == 0)
+        {
+            mfaceX = PlayerInput.Instance.MoveX;
+            mfaceY = -1;
+        }
+
+        anim.SetFloat("faceX", mfaceX);
+        anim.SetFloat("faceY", mfaceY);
 
     }
 }
