@@ -161,7 +161,7 @@ private void PegarItem(Collider2D collision)
         }
     }
 
-    private void PegarPart(PickupItem item)
+    public void PegarPart(PickupItem item)
     {
         if(cribPart == TipoItem.vazio)
         {
@@ -226,7 +226,7 @@ private void PegarItem(Collider2D collision)
            // else
 		    if (objetoPerto.tag == "PickUpItem")
             {
-				Debug.Log("aliwh: " + objetoPerto.tag);
+				//Debug.Log("aliwh: " + objetoPerto.tag);
                 PegarItem(objetoPerto);
             }
             else if(objetoPerto.tag == "SpaceCrib")

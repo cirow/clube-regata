@@ -10,7 +10,9 @@ public class PuzzleManager : MonoBehaviour {
     private Collider2D rockPrize;
     [SerializeField]
     private Collider2D rockPuzzlePrize;
-    [SerializeField]
+	[SerializeField]
+	private PickupItem letraPuzzlePrize;
+	[SerializeField]
     private AudioClip plim;
     [SerializeField]
     private AudioClip missSound;
@@ -82,11 +84,16 @@ public class PuzzleManager : MonoBehaviour {
 
         if (all_keys_correct)
         {
-            Plim();
+			WinPuzzleLetras();
+
         }
     }
 
-
+	void WinPuzzleLetras()
+	{
+		AudioManager.instance.ItemAudio();
+		Controller2D.Player.PegarPart(letraPuzzlePrize);
+	}
     public bool RockPuzzle(int rock_index)
     {
         if(rock_password_index < 3)
