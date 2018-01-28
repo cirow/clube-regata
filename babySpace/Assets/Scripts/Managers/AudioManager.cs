@@ -139,6 +139,14 @@ public class AudioManager : MonoBehaviour {
         audioSources[3].PlayOneShot(gotItem);
     }
 
+    public void InterVolume(float vol)
+    {
+        if(audioSources[2].isPlaying)
+        {
+            audioSources[2].volume = vol;
+        }
+    }
+
 	void Update ()
 	{
 		if(win)
