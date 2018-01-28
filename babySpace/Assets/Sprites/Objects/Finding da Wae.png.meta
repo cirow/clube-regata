@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 194f3c8fba5cf2e43b97dfc1abe255b2
-timeCreated: 1517093339
+timeCreated: 1517120978
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -20,6 +20,11 @@ TextureImporter:
     21300026: Finding da Wae_13
     21300028: Finding da Wae_14
     21300030: Finding da Wae_15
+    21300032: Finding da Wae_16
+    21300034: Finding da Wae_17
+    21300036: Finding da Wae_18
+    21300038: Finding da Wae_19
+    21300040: Finding da Wae_20
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -47,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -155,8 +160,8 @@ TextureImporter:
       name: Finding da Wae_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
+        x: 260
+        y: 257
         width: 64
         height: 64
       alignment: 0
@@ -169,7 +174,7 @@ TextureImporter:
       name: Finding da Wae_5
       rect:
         serializedVersion: 2
-        x: 65
+        x: 0
         y: 192
         width: 64
         height: 64
@@ -183,7 +188,7 @@ TextureImporter:
       name: Finding da Wae_6
       rect:
         serializedVersion: 2
-        x: 130
+        x: 65
         y: 192
         width: 64
         height: 64
@@ -197,7 +202,7 @@ TextureImporter:
       name: Finding da Wae_7
       rect:
         serializedVersion: 2
-        x: 195
+        x: 130
         y: 192
         width: 64
         height: 64
@@ -211,8 +216,8 @@ TextureImporter:
       name: Finding da Wae_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 127
+        x: 195
+        y: 192
         width: 64
         height: 64
       alignment: 0
@@ -225,8 +230,8 @@ TextureImporter:
       name: Finding da Wae_9
       rect:
         serializedVersion: 2
-        x: 65
-        y: 127
+        x: 260
+        y: 192
         width: 64
         height: 64
       alignment: 0
@@ -239,7 +244,7 @@ TextureImporter:
       name: Finding da Wae_10
       rect:
         serializedVersion: 2
-        x: 130
+        x: 0
         y: 127
         width: 64
         height: 64
@@ -253,7 +258,7 @@ TextureImporter:
       name: Finding da Wae_11
       rect:
         serializedVersion: 2
-        x: 195
+        x: 65
         y: 127
         width: 64
         height: 64
@@ -267,6 +272,48 @@ TextureImporter:
       name: Finding da Wae_12
       rect:
         serializedVersion: 2
+        x: 127
+        y: 127
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Finding da Wae_13
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 127
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Finding da Wae_14
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 127
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Finding da Wae_15
+      rect:
+        serializedVersion: 2
         x: 0
         y: 62
         width: 64
@@ -278,7 +325,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Finding da Wae_13
+      name: Finding da Wae_16
       rect:
         serializedVersion: 2
         x: 65
@@ -292,13 +339,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Finding da Wae_14
+      name: Finding da Wae_17
       rect:
         serializedVersion: 2
-        x: 130
-        y: 62
-        width: 64
-        height: 64
+        x: 139
+        y: 77
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -306,13 +353,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Finding da Wae_15
+      name: Finding da Wae_18
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 21
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Finding da Wae_19
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 12
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Finding da Wae_20
       rect:
         serializedVersion: 2
         x: 135
-        y: 5
-        width: 118
-        height: 53
+        y: 6
+        width: 119
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

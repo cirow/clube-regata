@@ -18,7 +18,6 @@ public class Controller2D : MonoBehaviour {
 
 	public int numberEquip = 0;
 	public bool playBeep = true;
-	// Use this for initialization
 
     private float mfaceX = 1;
     private float mfaceY = 1;
@@ -108,6 +107,7 @@ private void PegarItem(Collider2D collision)
 
                 case TipoItem.capacete:
 					numberEquip++;
+					gameObject.GetComponent<PlayerInput>().canMove = true;
 					if (numberEquip >= 3)
 					{
 						playBeep = false;
