@@ -8,6 +8,9 @@ TagManager:
   - LevelManager
   - Limit
   - SpaceCrib
+  - HintSpot
+  - BeepCollision
+  - ConsoleManager
   layers:
   - Default
   - TransparentFX
