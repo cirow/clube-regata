@@ -1,14 +1,34 @@
 fileFormatVersion: 2
 <<<<<<< Updated upstream
 guid: 5840ca9337934524b95c8672a921b5c6
+<<<<<<< Updated upstream
 timeCreated: 1517150565
 =======
 guid: e124b7db378216b4ab341400031f7f9c
 timeCreated: 1517151225
 >>>>>>> Stashed changes
+=======
+timeCreated: 1517161133
+>>>>>>> Stashed changes
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: walkingHelmPip_spritesheet_0
+    21300002: walkingHelmPip_spritesheet_1
+    21300004: walkingHelmPip_spritesheet_2
+    21300006: walkingHelmPip_spritesheet_3
+    21300008: walkingHelmPip_spritesheet_4
+    21300010: walkingHelmPip_spritesheet_5
+    21300012: walkingHelmPip_spritesheet_6
+    21300014: walkingHelmPip_spritesheet_7
+    21300016: walkingHelmPip_spritesheet_8
+    21300018: walkingHelmPip_spritesheet_9
+    21300020: walkingHelmPip_spritesheet_10
+    21300022: walkingHelmPip_spritesheet_11
+    21300024: walkingHelmPip_spritesheet_12
+    21300026: walkingHelmPip_spritesheet_13
+    21300028: walkingHelmPip_spritesheet_14
+    21300030: walkingHelmPip_spritesheet_15
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -83,7 +103,231 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: walkingHelmPip_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 128
+        width: 67
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: walkingHelmPip_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 134
+        width: 74
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: walkingHelmPip_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 128
+        width: 75
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: walkingHelmPip_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 140
+        width: 74
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: walkingHelmPip_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 140
+        width: 74
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: walkingHelmPip_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 128
+        width: 75
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: walkingHelmPip_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 134
+        width: 74
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: walkingHelmPip_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 128
+        width: 67
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: walkingHelmPip_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 10
+        width: 66
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: walkingHelmPip_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 10
+        width: 74
+        height: 107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: walkingHelmPip_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 10
+        width: 66
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: walkingHelmPip_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 10
+        width: 74
+        height: 107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: walkingHelmPip_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 10
+        width: 74
+        height: 107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: walkingHelmPip_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 10
+        width: 66
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: walkingHelmPip_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 10
+        width: 74
+        height: 107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: walkingHelmPip_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 10
+        width: 66
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

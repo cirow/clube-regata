@@ -1,14 +1,21 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
 guid: c9c53782fccf19448ac27d8024e2f54c
-timeCreated: 1517150565
-=======
-guid: 39f5aec0ed09dee42acc53f0d343c4a4
-timeCreated: 1517151225
->>>>>>> Stashed changes
+timeCreated: 1517161852
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: idleHelmPak_spritesheet_0
+    21300002: idleHelmPak_spritesheet_1
+    21300004: idleHelmPak_spritesheet_2
+    21300006: idleHelmPak_spritesheet_3
+    21300008: idleHelmPak_spritesheet_4
+    21300010: idleHelmPak_spritesheet_5
+    21300012: idleHelmPak_spritesheet_6
+    21300014: idleHelmPak_spritesheet_7
+    21300016: idleHelmPak_spritesheet_8
+    21300018: idleHelmPak_spritesheet_9
+    21300020: idleHelmPak_spritesheet_10
+    21300022: idleHelmPak_spritesheet_11
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -41,7 +48,7 @@ TextureImporter:
     mipBias: -1
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -83,7 +90,175 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: idleHelmPak_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 170
+        width: 85
+        height: 125
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idleHelmPak_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 170
+        width: 85
+        height: 126
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idleHelmPak_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 170
+        width: 85
+        height: 122
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idleHelmPak_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 170
+        width: 85
+        height: 122
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idleHelmPak_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 170
+        width: 85
+        height: 126
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idleHelmPak_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 170
+        width: 85
+        height: 125
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idleHelmPak_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 23
+        width: 81
+        height: 125
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idleHelmPak_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 23
+        width: 80
+        height: 126
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idleHelmPak_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 23
+        width: 80
+        height: 123
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idleHelmPak_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 23
+        width: 80
+        height: 123
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idleHelmPak_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 23
+        width: 80
+        height: 126
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idleHelmPak_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 23
+        width: 81
+        height: 125
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
