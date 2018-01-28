@@ -12,6 +12,7 @@ TagManager:
   - HintSpot
   - BeepCollision
   - ConsoleManager
+  - Letra
   layers:
   - Default
   - TransparentFX
