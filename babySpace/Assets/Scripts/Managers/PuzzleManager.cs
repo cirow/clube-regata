@@ -15,6 +15,9 @@ public class PuzzleManager : MonoBehaviour {
     [SerializeField]
     private AudioClip missSound;
 
+    [SerializeField]
+    private PuzzleButton[] buttons_letras;
+
     private AudioSource audioSource;
     [SerializeField]
     public int rock_password_index = 0;
@@ -65,6 +68,23 @@ public class PuzzleManager : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void CheckPuzzleLetras()
+    {
+        bool all_keys_correct = true;
+        foreach(PuzzleButton button in buttons_letras)
+        {
+            if (button.IsKeyCorrect() == false)
+            {
+                all_keys_correct = false;
+            }
+        }
+
+        if (all_keys_correct)
+        {
+            Plim();
+        }
+    }
 
 
     public bool RockPuzzle(int rock_index)

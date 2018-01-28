@@ -7,10 +7,22 @@ public class Letra : MonoBehaviour {
     private Rigidbody2D rigidBody;
 
     [SerializeField]
+    private string valor_letra;
+
+    [SerializeField]
     private float marginRight, marginLeft, marginUp, marginDown;
     private float maxX, maxY, minX, minY;
 
     RaycastHit2D hit;
+
+
+    public string Valor_Letra
+    {
+        get
+        {
+            return valor_letra;
+        }
+    }
 
 
     // Use this for initialization
@@ -54,10 +66,30 @@ public class Letra : MonoBehaviour {
         }
         else if ((PlayerInput.Instance.MoveY != 0) && PlayerInput.Instance.MoveX == 0)
         {
-            Vector2 mposition = new Vector2(transform.position.x,transform.position.y + PlayerInput.Instance.MoveY);
+            Vector3 mposition = new Vector3(transform.position.x, transform.position.y + PlayerInput.Instance.MoveY, transform.position.z);
             mposition.y = Mathf.Clamp(mposition.y, minY, maxY);
 
-            rigidBody.MovePosition(mposition);
+            hit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y + 0.6f * PlayerInput.Instance.MoveY), Vector2.up * PlayerInput.Instance.MoveY, .5f, LayerMask.GetMask("PuzzleBox"));
+
+            if (hit.collider != null)
+            {
+                Debug.Log("Raycast Hit");
+                Debug.Log(hit.collider.gameObject.name);
+            }
+            else
+            {
+                rigidBody.MovePosition(mposition);
+
+            }
+            //transform.Translate(Vector3.right * PlayerInput.Instance.MoveX);
+
         }
+        //else if ((PlayerInput.Instance.MoveY != 0) && PlayerInput.Instance.MoveX == 0)
+        //{
+        //    Vector2 mposition = new Vector2(transform.position.x,transform.position.y + PlayerInput.Instance.MoveY);
+        //    mposition.y = Mathf.Clamp(mposition.y, minY, maxY);
+
+        //    rigidBody.MovePosition(mposition);
+        //}
     }
 }

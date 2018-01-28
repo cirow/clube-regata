@@ -137,4 +137,9 @@ MonoBehaviour:
   rockPuzzlePrize: {fileID: 0}
   plim: {fileID: 8300000, guid: 55e0f763c09acef4cb11b8ae3c8c5e1b, type: 3}
   missSound: {fileID: 8300000, guid: e99f06577aa9bd94d84e6f1252e33c6d, type: 3}
+  buttons_letras:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   rock_password_index: 0
