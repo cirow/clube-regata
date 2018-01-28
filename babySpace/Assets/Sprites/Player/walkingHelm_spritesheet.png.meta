@@ -1,10 +1,6 @@
 fileFormatVersion: 2
 guid: 21eb5ecac5565444abfe2db662735d27
-<<<<<<< Updated upstream
-timeCreated: 1517156557
-=======
-timeCreated: 1517160137
->>>>>>> Stashed changes
+timeCreated: 1517164508
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -96,8 +92,6 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-<<<<<<< Updated upstream:babySpace/Assets/Sprites/Player/walkingHelm_spritesheet.png.meta
-=======
   - buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -118,7 +112,6 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
->>>>>>> Stashed changes:babySpace/Assets/Sprites/walkingHelm_spritesheet.png.meta
   spriteSheet:
     serializedVersion: 2
     sprites:

@@ -1,10 +1,6 @@
 fileFormatVersion: 2
 guid: 23d3ba9ef25aefd439ef523b7e46be8f
-<<<<<<< Updated upstream
-timeCreated: 1517156287
-=======
-timeCreated: 1517159800
->>>>>>> Stashed changes
+timeCreated: 1517164548
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -92,8 +88,6 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-<<<<<<< Updated upstream:babySpace/Assets/Sprites/Player/idleHelm_spritesheet.png.meta
-=======
   - buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -114,7 +108,6 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
->>>>>>> Stashed changes:babySpace/Assets/Sprites/idleHelm_spritesheet.png.meta
   spriteSheet:
     serializedVersion: 2
     sprites:
