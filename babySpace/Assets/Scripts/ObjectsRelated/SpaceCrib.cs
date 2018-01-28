@@ -9,14 +9,28 @@ public class SpaceCrib : MonoBehaviour {
     private bool hasMirror = false;
 
 
+
+	public GameObject motorChild;
+	public GameObject combChild;
+	public GameObject espelhoChild;
+	public AudioClip attachFx;
+
+	private AudioSource audioSource;
+
+
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+	{
+		audioSource = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+	{
+		if (hasMotor && hasFuel && hasMirror)
+		{
+			AudioManager.instance.win = true;
+		}
 	}
 
     public void AttachPart(TipoItem cribPart)
@@ -25,16 +39,19 @@ public class SpaceCrib : MonoBehaviour {
         {
             case TipoItem.motor:
                 hasMotor = true;
+				PutMotor();
                 Debug.Log("Got Motor");
 
                 break;
             case TipoItem.combustivel:
                 hasFuel = true;
+				PutCombustivel();
                 Debug.Log("Got Fuel");
 
                 break;
             case TipoItem.espelho:
                 hasMirror = true;
+				PutEspelho();
                 Debug.Log("Got Mirror");
   
                 break;
@@ -42,5 +59,26 @@ public class SpaceCrib : MonoBehaviour {
                 Debug.Log("Error, not supported part");
                 break;
         }
+		audioSource.PlayOneShot(attachFx); 
     }
+
+	public void PutMotor()
+	{
+		hasMotor = true;
+		motorChild.GetComponent<SpriteRenderer>().enabled = true;
+	}
+
+	public void PutCombustivel()
+	{
+		hasFuel = true;
+		combChild.GetComponent<SpriteRenderer>().enabled = true;
+	}
+
+	public void PutEspelho()
+	{
+		hasMirror = true;
+		espelhoChild.GetComponent<SpriteRenderer>().enabled = true;
+	}
+
+
 }

@@ -66,6 +66,7 @@ public class AudioManager : MonoBehaviour {
 		}
 		else
 		{
+			Debug.Log("wind audio off");
 			if (audioSources[0].clip == null)
 			{
 				//do nothing
@@ -81,6 +82,7 @@ public class AudioManager : MonoBehaviour {
 	{
 		if(play)
 		{
+			Debug.Log("victory audio on");
 			audioSources[1].clip = backgroundAudios[1];
 			if (audioSources[1].isPlaying)
 			{
@@ -94,7 +96,8 @@ public class AudioManager : MonoBehaviour {
 		}
 		else
 		{
-			if(audioSources[1].clip == null)
+			Debug.Log("victory audio off");
+			if (audioSources[1].clip == null)
 			{
 				//do nothing
 			}
@@ -118,11 +121,13 @@ public class AudioManager : MonoBehaviour {
 			}
 			else
 			{
+
 				audioSources[2].Play();
 			}
 		}
 		else
 		{
+			Debug.Log("interf audio off");
 			if (audioSources[2].clip == null)
 			{
 				//do nothing
