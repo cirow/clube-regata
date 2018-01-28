@@ -252,22 +252,22 @@ private void PegarItem(Collider2D collision)
 		{
 			consoleManager.isHint = true;
 			//consoleManager.consoleCanvas.enabled = true;
-			consoleManager.hintText.text = "Hint = Purple";
-			consoleManager.coordText.text = "Coord (x:y) = 40:60";
+			consoleManager.hintText.text = "Hint = Orange";
+			consoleManager.coordText.text = "Coord (x:y) = 64:37";
 			
 		}
 		else if(hintSpot.item == TipoItem.espelho)
 		{
 			consoleManager.isHint = true;
 			consoleManager.hintText.text = "Hint = 6134";
-			consoleManager.coordText.text = "Coord (x:y) = 50:100";
+			consoleManager.coordText.text = "Coord (x:y) = 50:4";
 			//consoleManager.consoleCanvas.enabled = true;
 		}
 		else if(hintSpot.item == TipoItem.combustivel)
 		{
 			consoleManager.isHint = true;
 			consoleManager.hintText.text = "Hint = Happy Bday";
-			consoleManager.coordText.text = "Coord (x:y) = 10:10";
+			consoleManager.coordText.text = "Coord (x:y) = 12:12";
 			//consoleManager.consoleCanvas.enabled = true;
 		}
 		else

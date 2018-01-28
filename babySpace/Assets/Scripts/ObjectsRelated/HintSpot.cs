@@ -62,8 +62,8 @@ public class HintSpot : MonoBehaviour {
 				audioSource.Play();
 			}
 			float auxDist = Mathf.Abs(Vector3.Distance(player.transform.position, transform.position));
-			audioSource.volume = Mathf.Lerp(0.7f, 0f, (int)auxDist / maxDist);
-			AudioManager.instance.InterVolume(Mathf.Lerp(0.7f, 0f, 1 - (int)auxDist / maxDist));
+			audioSource.volume = Mathf.Lerp(0.9f, 0f, (int)auxDist / maxDist);
+			AudioManager.instance.InterVolume(Mathf.Lerp(0.7f, 0.0f, 1 - (int)auxDist / maxDist));
 		}
 		else
 		{

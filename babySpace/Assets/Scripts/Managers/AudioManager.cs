@@ -54,6 +54,7 @@ public class AudioManager : MonoBehaviour {
 		if (play)
 		{
 			audioSources[0].clip = backgroundAudios[0];
+			audioSources[0].volume = 0.7f;
 			if (audioSources[0].isPlaying)
 			{
 				audioSources[0].Stop();
