@@ -8189,6 +8189,86 @@ GameObject:
   m_PrefabParentObject: {fileID: 1546211060482680, guid: 6631ee2602e12ce4aae38eccf823d0ae,
     type: 2}
   m_PrefabInternal: {fileID: 1577302693}
+--- !u!82 &1122284718
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1122284717}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2efd0904919a2154f88c83ccf879861e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!4 &1122284724 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4994247815482024, guid: 6631ee2602e12ce4aae38eccf823d0ae,
@@ -12646,6 +12726,27 @@ Prefab:
       propertyPath: teleportBaloon
       value: 
       objectReference: {fileID: 679644825}
+    - target: {fileID: 212313336654983452, guid: 6631ee2602e12ce4aae38eccf823d0ae,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 40de58cf98b01c342b9c3c3b975b15fb,
+        type: 3}
+    - target: {fileID: 212313336654983452, guid: 6631ee2602e12ce4aae38eccf823d0ae,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212313336654983452, guid: 6631ee2602e12ce4aae38eccf823d0ae,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 1.2538462
+      objectReference: {fileID: 0}
+    - target: {fileID: 212313336654983452, guid: 6631ee2602e12ce4aae38eccf823d0ae,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.75384617
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6631ee2602e12ce4aae38eccf823d0ae, type: 2}
   m_IsPrefabParent: 0
@@ -14030,7 +14131,7 @@ Prefab:
       objectReference: {fileID: 1122284717}
     - target: {fileID: 1445868859619626, guid: c3bae47ffe865044cb83d19b903f5010, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c3bae47ffe865044cb83d19b903f5010, type: 2}

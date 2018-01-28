@@ -124,9 +124,14 @@ public class Controller2D : MonoBehaviour {
 		GameObject tempColliders = GameObject.FindGameObjectWithTag("ParentLimit");
 		Destroy(tempColliders);
 		AudioManager.instance.InterfAudio(true);
-	}
+        Controller2D.Player.Anim.SetLayerWeight(1, 0f);
+        Controller2D.Player.Anim.SetLayerWeight(2, 0f);
+        Controller2D.Player.Anim.SetLayerWeight(3, 0f);
+        Controller2D.Player.Anim.SetLayerWeight(4, 0f);
 
-private void PegarItem(Collider2D collision)
+    }
+
+    private void PegarItem(Collider2D collision)
     {
         if(collision.tag == "PickUpItem")
         {
@@ -314,6 +319,10 @@ private void PegarItem(Collider2D collision)
 		teleportBaloon.enabled = false;
         anim.SetTrigger("FinishTeleport");
 
+    }
+    public void PlayWarpSound()
+    {
+        GetComponent<AudioSource>().Play();
     }
 
     private void UpdateFace()
