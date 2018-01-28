@@ -5,6 +5,7 @@ using UnityEngine;
 public class Controller2D : MonoBehaviour {
 
 
+    private static Controller2D player = null;
 
     [SerializeField]
     private float walk_speed;
@@ -24,12 +25,32 @@ public class Controller2D : MonoBehaviour {
 	private ConsoleManager consoleManager;
     // Use this for initialization
     void Start () {
+
+        if(Controller2D.Player == null)
+        {
+            player = this;
+        }
+        else
+        {
+            Destroy(this);
+            Debug.Log("Error, trying to instantiate 2 players");
+        }
+
+
         playerCollider = GetComponent<Collider2D>();
         playerRigidBody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 		consoleManager = GameObject.FindGameObjectWithTag("ConsoleManager").GetComponent<ConsoleManager>();
 	}
 
+
+    public static Controller2D Player
+    {
+        get
+        {
+            return player;
+        }
+    }
 
     public TipoItem GetCribPart
     {
@@ -38,6 +59,13 @@ public class Controller2D : MonoBehaviour {
         }
     }
 	
+    public Animator Anim
+    {
+        get
+        {
+            return anim;
+        }
+    }
 	// Update is called once per frame
 	void Update () {
         //  playerRigidBody.velocity = new Vector2(PlayerInput.Instance.MoveX, PlayerInput.Instance.MoveY);
@@ -157,6 +185,11 @@ private void PegarItem(Collider2D collision)
         item.BeTaken();
 
     }
+
+    private void Levantar()
+    {
+
+    }
     private void PegarConsole(PickupItem item)
     {
         Debug.Log("Peguei um console carai");
@@ -183,7 +216,7 @@ private void PegarItem(Collider2D collision)
     public void SearchAction()
     {
         Collider2D objetoPerto = Physics2D.OverlapCircle(transform.position, 1.6f, LayerMask.GetMask("ActionLayer"));
-        if (objetoPerto != null)
+        if (objetoPerto != null && PlayerInput.Instance.game_is_started)
         {
 			//if(objetoPerto.tag == "HintSpot")
 			//{
