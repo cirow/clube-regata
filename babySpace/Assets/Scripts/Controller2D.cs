@@ -200,7 +200,11 @@ private void PegarItem(Collider2D collision)
             {
                 ActionNave(objetoPerto.GetComponent<SpaceCrib>());
             }
-			
+            else if (objetoPerto.tag == "RockSwitch")
+            {
+                RockPress(objetoPerto.GetComponent<Rock>());
+            }
+
         }
         else
         {
@@ -239,6 +243,13 @@ private void PegarItem(Collider2D collision)
 		}
 		consoleManager.OpenConsole();
 	}
+
+    private void RockPress(Rock pedra)
+    {
+        Debug.Log("Pedra action");
+        pedra.ActivateSwitch();
+    }
+
 
     private void ActionNave(SpaceCrib nave)
     {

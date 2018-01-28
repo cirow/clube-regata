@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour {
 	public AudioClip[] backgroundAudios;
 	public AudioClip[] detectAudios;
 	public AudioClip interfAudio;
+    public AudioClip gotItem;
 	public bool win;
 	public bool dontHaveEquip;
 
@@ -18,7 +19,7 @@ public class AudioManager : MonoBehaviour {
 
 	void Awake()
 	{
-		if (instance != null)
+		if(instance != null)
 		{
 			Destroy(gameObject);
 		}
@@ -29,12 +30,12 @@ public class AudioManager : MonoBehaviour {
 			GameObject.DontDestroyOnLoad(gameObject);
 		}
 	}
-
-	void Start()
+	
+	void Start ()
 	{
 		levelManager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
-		audioSources = GetComponents<AudioSource>();
-		if (audioSources.Length >= 2)
+		audioSources = GetComponents<AudioSource>();	
+		if(audioSources.Length >= 2)
 		{
 			Debug.Log("audio sources ok");
 		}
@@ -53,7 +54,6 @@ public class AudioManager : MonoBehaviour {
 		if (play)
 		{
 			audioSources[0].clip = backgroundAudios[0];
-			audioSources[0].volume = 0.5f;
 			if (audioSources[0].isPlaying)
 			{
 				audioSources[0].Stop();
@@ -79,7 +79,7 @@ public class AudioManager : MonoBehaviour {
 
 	public void VictoryAudio(bool play)
 	{
-		if (play)
+		if(play)
 		{
 			audioSources[1].clip = backgroundAudios[1];
 			if (audioSources[1].isPlaying)
@@ -94,7 +94,7 @@ public class AudioManager : MonoBehaviour {
 		}
 		else
 		{
-			if (audioSources[1].clip == null)
+			if(audioSources[1].clip == null)
 			{
 				//do nothing
 			}
@@ -134,13 +134,10 @@ public class AudioManager : MonoBehaviour {
 		}
 	}
 
-	public void InterVolume(float vol)
-	{
-		if (audioSources[2].isPlaying)
-		{
-			audioSources[2].volume = vol;
-		}
-	}
+    public void ItemAudio()
+    {
+        audioSources[3].PlayOneShot(gotItem);
+    }
 
 	void Update ()
 	{

@@ -8,6 +8,7 @@ TagManager:
   - LevelManager
   - Limit
   - SpaceCrib
+  - RockSwitch
   - HintSpot
   - BeepCollision
   - ConsoleManager
@@ -21,7 +22,7 @@ TagManager:
   - 
   - 
   - ActionLayer
-  - 
+  - PuzzleBox
   - 
   - 
   - 

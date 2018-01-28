@@ -18,6 +18,7 @@ public class CribPart : PickupItem {
     public override void BeTaken()
     {
         IconsManagerUI.Instance.GetPart(this.Item);
+        AudioManager.instance.ItemAudio();
         Destroy(gameObject);
     }
 }
