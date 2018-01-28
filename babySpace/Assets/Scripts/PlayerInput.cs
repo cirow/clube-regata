@@ -12,6 +12,7 @@ public class PlayerInput : MonoBehaviour {
     private bool teleportButton;
 	// Use this for initialization
 	public bool canMove = false;
+    public bool game_is_started = false;
 
 	void Start () {
         if(instance == null)
@@ -78,7 +79,7 @@ public class PlayerInput : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		if(canMove)
+		if(canMove && game_is_started)
 		{
 			moveX = Input.GetAxisRaw("Horizontal");
 			moveY = Input.GetAxisRaw("Vertical");
@@ -89,6 +90,11 @@ public class PlayerInput : MonoBehaviour {
 			moveY = 0;
 		}
         actionButton = Input.GetButtonDown("Jump");
+        if (actionButton)
+        {
+            game_is_started = true;
+            Controller2D.Player.Anim.SetTrigger("getUp");
+        }
         teleportButton = Input.GetKeyDown(KeyCode.T);
 
 

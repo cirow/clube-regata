@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: anim_warp
+  m_Name: anim_warp_old
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -30,10 +30,6 @@ AnimationClip:
       value: {fileID: 21300008, guid: b341dc0834f32d8408c0d9331a5b50ed, type: 3}
     - time: 0.625
       value: {fileID: 21300010, guid: b341dc0834f32d8408c0d9331a5b50ed, type: 3}
-    - time: 0.75
-      value: {fileID: 21300012, guid: b341dc0834f32d8408c0d9331a5b50ed, type: 3}
-    - time: 0.875
-      value: {fileID: 21300014, guid: b341dc0834f32d8408c0d9331a5b50ed, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -59,14 +55,12 @@ AnimationClip:
     - {fileID: 21300006, guid: b341dc0834f32d8408c0d9331a5b50ed, type: 3}
     - {fileID: 21300008, guid: b341dc0834f32d8408c0d9331a5b50ed, type: 3}
     - {fileID: 21300010, guid: b341dc0834f32d8408c0d9331a5b50ed, type: 3}
-    - {fileID: 21300012, guid: b341dc0834f32d8408c0d9331a5b50ed, type: 3}
-    - {fileID: 21300014, guid: b341dc0834f32d8408c0d9331a5b50ed, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1
+    m_StopTime: 0.75
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -87,7 +81,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: 0.625
+  - time: 0.5
     functionName: Teleport
     data: 
     objectReferenceParameter: {fileID: 0}
