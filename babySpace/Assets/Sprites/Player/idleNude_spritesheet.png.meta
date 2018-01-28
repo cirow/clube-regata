@@ -1,9 +1,15 @@
 fileFormatVersion: 2
 guid: 09004cac28192ad4c8f0718c325decef
-timeCreated: 1517150564
+timeCreated: 1517155865
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: idleNude_spritesheet_0
+    21300002: idleNude_spritesheet_1
+    21300004: idleNude_spritesheet_2
+    21300006: idleNude_spritesheet_3
+    21300008: idleNude_spritesheet_4
+    21300010: idleNude_spritesheet_5
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -36,7 +42,7 @@ TextureImporter:
     mipBias: -1
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -76,9 +82,116 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+<<<<<<< Updated upstream:babySpace/Assets/Sprites/Player/idleNude_spritesheet.png.meta
+=======
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+>>>>>>> Stashed changes:babySpace/Assets/Sprites/idleNude_spritesheet.png.meta
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: idleNude_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3
+        width: 73
+        height: 111
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idleNude_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 6
+        width: 73
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idleNude_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 7
+        width: 73
+        height: 107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idleNude_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 7
+        width: 73
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idleNude_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 6
+        width: 73
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idleNude_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 3
+        width: 73
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

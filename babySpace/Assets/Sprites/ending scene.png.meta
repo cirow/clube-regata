@@ -1,6 +1,16 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:babySpace/Assets/Sprites/ending scene.png.meta
 guid: f22a11b6d7e3ca3498d2222b0dfe9277
 timeCreated: 1517157096
+=======
+<<<<<<< Updated upstream
+guid: 097320b1598fea7448ecbe32f45ca999
+timeCreated: 1517150564
+=======
+guid: 679bbed54d564364ea604e9a6762273c
+timeCreated: 1517151225
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes:babySpace/Assets/Sprites/idleFull_spritesheet.png.meta
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}

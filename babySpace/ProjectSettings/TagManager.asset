@@ -13,6 +13,8 @@ TagManager:
   - BeepCollision
   - ConsoleManager
   - Letra
+  - ParentLimit
+  - baloonTrig
   layers:
   - Default
   - TransparentFX

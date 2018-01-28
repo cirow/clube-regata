@@ -90,10 +90,12 @@ public class PlayerInput : MonoBehaviour {
 			moveY = 0;
 		}
         actionButton = Input.GetButtonDown("Jump");
-        if (actionButton)
+        if (actionButton && !game_is_started)
         {
             game_is_started = true;
             Controller2D.Player.Anim.SetTrigger("getUp");
+            Controller2D.Player.Anim.SetLayerWeight(4, 1f);
+            actionButton = false;
         }
         teleportButton = Input.GetKeyDown(KeyCode.T);
 

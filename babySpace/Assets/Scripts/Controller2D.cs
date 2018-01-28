@@ -11,6 +11,13 @@ public class Controller2D : MonoBehaviour {
     private float walk_speed;
     [SerializeField]
     private Transform warpPoint;
+    [SerializeField]
+    private SpriteRenderer helpPopUp;
+
+    [SerializeField]
+    private SpriteRenderer equipBaloon;
+    [SerializeField]
+    private SpriteRenderer pipBaloon;
 
     private Collider2D playerCollider;
     private Rigidbody2D playerRigidBody;
@@ -41,6 +48,7 @@ public class Controller2D : MonoBehaviour {
         playerRigidBody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 		consoleManager = GameObject.FindGameObjectWithTag("ConsoleManager").GetComponent<ConsoleManager>();
+        equipBaloon.enabled = false;
 	}
 
 
@@ -111,7 +119,7 @@ public class Controller2D : MonoBehaviour {
 	{
 		//Tem todo o equipamento entao toca o audio da interferencia
 		//Destroi colisores que limitam o inicio
-		GameObject tempColliders = GameObject.FindGameObjectWithTag("Limit");
+		GameObject tempColliders = GameObject.FindGameObjectWithTag("ParentLimit");
 		Destroy(tempColliders);
 		AudioManager.instance.InterfAudio(true);
 	}
@@ -182,6 +190,9 @@ private void PegarItem(Collider2D collision)
     private void PegarCapacete(PickupItem item)
     {
         Debug.Log("Peguei um capacete carai");
+        anim.SetLayerWeight(4, 0f);
+        anim.SetLayerWeight(2, 1f);
+        helpPopUp.enabled = false;
         item.BeTaken();
 
     }
@@ -331,5 +342,39 @@ private void PegarItem(Collider2D collision)
         anim.SetFloat("faceX", mfaceX);
         anim.SetFloat("faceY", mfaceY);
 
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Limit")
+        {
+            equipBaloon.enabled = true;
+        }
+    }
+
+
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Limit")
+        {
+            equipBaloon.enabled = false;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "baloonTrig")
+        {
+            pipBaloon.enabled = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "baloonTrig")
+        {
+            pipBaloon.enabled = false;
+        }
     }
 }
