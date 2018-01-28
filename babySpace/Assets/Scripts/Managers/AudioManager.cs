@@ -44,6 +44,7 @@ public class AudioManager : MonoBehaviour {
 			Debug.Log("error getting audio sources");
 		}
 		VictoryAudio(false);
+		InterfAudio(false);
 		WindAudio(true);
 	}
 

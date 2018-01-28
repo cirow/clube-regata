@@ -18,8 +18,10 @@ public class Controller2D : MonoBehaviour {
     private SpriteRenderer equipBaloon;
     [SerializeField]
     private SpriteRenderer pipBaloon;
+	[SerializeField]
+	private SpriteRenderer teleportBaloon;
 
-    private Collider2D playerCollider;
+	private Collider2D playerCollider;
     private Rigidbody2D playerRigidBody;
     private Animator anim;
     public TipoItem cribPart = TipoItem.vazio;
@@ -176,6 +178,7 @@ private void PegarItem(Collider2D collision)
             Debug.Log("Peguei uma peça carai");
             cribPart = item.Item;
             item.BeTaken();
+			teleportBaloon.enabled = true;
         }
 
     }
@@ -308,6 +311,7 @@ private void PegarItem(Collider2D collision)
     private void Teleport()
     {
         transform.position = warpPoint.position;
+		teleportBaloon.enabled = false;
         anim.SetTrigger("FinishTeleport");
 
     }
