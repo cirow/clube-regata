@@ -22,12 +22,13 @@ public class Controller2D : MonoBehaviour {
 
     private float mfaceX = 1;
     private float mfaceY = 1;
-
+	private ConsoleManager consoleManager;
     // Use this for initialization
     void Start () {
         playerCollider = GetComponent<Collider2D>();
         playerRigidBody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+		consoleManager = GameObject.FindGameObjectWithTag("ConsoleManager").GetComponent<ConsoleManager>();
 	}
 
 
@@ -59,24 +60,24 @@ public class Controller2D : MonoBehaviour {
             anim.SetBool("walking", false);
 
         }
+		if (Input.GetKeyDown(KeyCode.Tab))
+		{
+			SearchHint();
+		}
+		if (PlayerInput.Instance.ActionButton)
+		{
+			SearchAction();
+		}
+		if (PlayerInput.Instance.TeleportButton)
+		{
+			anim.Play("anim_warp");
+		}
 
-    }
-    private void FixedUpdate()
+
+	}
+	private void FixedUpdate()
     {
         playerRigidBody.MovePosition(playerRigidBody.position + (PlayerInput.Instance.MoveDirection * walk_speed * Time.fixedDeltaTime));
-
-
-
-
-        if (PlayerInput.Instance.ActionButton)
-        {
-            SearchAction();
-        }
-        if (PlayerInput.Instance.TeleportButton)
-        {
-            anim.Play("anim_warp");
-        }
-
 	}
 
 	void GotAllEquips ()
@@ -146,43 +147,98 @@ private void PegarItem(Collider2D collision)
     private void PegarAntena(PickupItem item)
     {
         Debug.Log("Peguei uma antena carai");
-       // item.BeTaken();
+        item.BeTaken();
 
     }
 
     private void PegarCapacete(PickupItem item)
     {
         Debug.Log("Peguei um capacete carai");
-      //  item.BeTaken();
+        item.BeTaken();
 
     }
     private void PegarConsole(PickupItem item)
     {
         Debug.Log("Peguei um console carai");
-      //  item.BeTaken();
+        item.BeTaken();
 
     }
 
+
+	public void SearchHint()
+	{
+		Collider2D objetoPerto = Physics2D.OverlapCircle(transform.position, 1.6f, LayerMask.GetMask("ActionLayer"));
+		if (objetoPerto != null && objetoPerto.tag == "HintSpot")
+		{
+			Debug.Log("HintSpot");
+			ShowHint(objetoPerto.GetComponent<HintSpot>());
+		}
+		else
+		{
+			consoleManager.isHint = false;
+			consoleManager.OpenConsole();
+		}
+	}
 
     public void SearchAction()
     {
         Collider2D objetoPerto = Physics2D.OverlapCircle(transform.position, 1.6f, LayerMask.GetMask("ActionLayer"));
         if (objetoPerto != null)
         {
-            if(objetoPerto.tag == "PickUpItem")
+			//if(objetoPerto.tag == "HintSpot")
+			//{
+			//	Debug.Log("HintSpot");
+			//	ShowHint(objetoPerto.GetComponent<HintSpot>());
+			//}
+           // else
+		    if (objetoPerto.tag == "PickUpItem")
             {
+				Debug.Log("aliwh: " + objetoPerto.tag);
                 PegarItem(objetoPerto);
             }
             else if(objetoPerto.tag == "SpaceCrib")
             {
                 ActionNave(objetoPerto.GetComponent<SpaceCrib>());
             }
+			
         }
         else
         {
             Debug.Log("nada perto");
         }
     }
+
+	void ShowHint(HintSpot hintSpot)
+	{
+		
+		if (hintSpot.item == TipoItem.motor)
+		{
+			consoleManager.isHint = true;
+			//consoleManager.consoleCanvas.enabled = true;
+			consoleManager.hintText.text = "Hint = Purple";
+			consoleManager.coordText.text = "Coord (x:y) = 40:60";
+			
+		}
+		else if(hintSpot.item == TipoItem.espelho)
+		{
+			consoleManager.isHint = true;
+			consoleManager.hintText.text = "Hint = 6134";
+			consoleManager.coordText.text = "Coord (x:y) = 50:100";
+			//consoleManager.consoleCanvas.enabled = true;
+		}
+		else if(hintSpot.item == TipoItem.combustivel)
+		{
+			consoleManager.isHint = true;
+			consoleManager.hintText.text = "Hint = Happy Bday";
+			consoleManager.coordText.text = "Coord (x:y) = 10:10";
+			//consoleManager.consoleCanvas.enabled = true;
+		}
+		else
+		{
+			Debug.Log("Tipo de hint errado");
+		}
+		consoleManager.OpenConsole();
+	}
 
     private void ActionNave(SpaceCrib nave)
     {
