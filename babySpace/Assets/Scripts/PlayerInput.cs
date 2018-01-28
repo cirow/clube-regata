@@ -11,6 +11,8 @@ public class PlayerInput : MonoBehaviour {
     private bool actionButton;
     private bool teleportButton;
 	// Use this for initialization
+	public bool canMove = false;
+
 	void Start () {
         if(instance == null)
         {
@@ -76,8 +78,16 @@ public class PlayerInput : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		moveX = Input.GetAxisRaw("Horizontal");
-        moveY = Input.GetAxisRaw("Vertical");
+		if(canMove)
+		{
+			moveX = Input.GetAxisRaw("Horizontal");
+			moveY = Input.GetAxisRaw("Vertical");
+		}
+		else
+		{
+			moveX = 0;
+			moveY = 0;
+		}
         actionButton = Input.GetButtonDown("Jump");
         teleportButton = Input.GetKeyDown(KeyCode.T);
 

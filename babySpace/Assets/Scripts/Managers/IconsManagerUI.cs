@@ -98,7 +98,7 @@ public class IconsManagerUI : MonoBehaviour {
 		{
 			mirrorIcon.color = Color.black;
 		}
-		posTextUI.text = "Pos: " + (int)player.transform.position.x + " : " + (int)player.transform.position.y;
+		posTextUI.text = "Pos = " + (int)player.transform.position.x + " : " + (int)player.transform.position.y;
 	}
 		
 

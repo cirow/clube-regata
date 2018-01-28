@@ -10,6 +10,7 @@ public class ConsoleManager : MonoBehaviour {
 	public Text coordText;
 	public bool isHint = false;
 	private GameObject player;
+	private PlayerInput playerInput;
 	void Awake()
 	{
 		consoleCanvas.enabled = false;
@@ -19,6 +20,7 @@ public class ConsoleManager : MonoBehaviour {
 	void Start ()
 	{
 		player = GameObject.FindGameObjectWithTag("Player");
+		playerInput = player.GetComponent<PlayerInput>();
 	}
 	
 	// Update is called once per frame
@@ -35,11 +37,13 @@ public class ConsoleManager : MonoBehaviour {
 			if (consoleCanvas.enabled == true)
 			{
 				consoleCanvas.enabled = false;
+				playerInput.canMove = true;
 				isHint = false;
 			}
 			else
 			{
 				consoleCanvas.enabled = true;
+				playerInput.canMove = false;
 				isHint = false;
 				//WriteCoordText();
 			}
@@ -50,11 +54,13 @@ public class ConsoleManager : MonoBehaviour {
 			if (consoleCanvas.enabled == true)
 			{
 				consoleCanvas.enabled = false;
+				playerInput.canMove = true;
 				isHint = false;
 			}
 			else
 			{
 				consoleCanvas.enabled = true;
+				playerInput.canMove = false;
 				isHint = false;
 				//WriteCoordText();
 			}

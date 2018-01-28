@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 9be0f5f631511234a926f65ed6a3645b
 timeCreated: 1517111978
+=======
+guid: 262f875ed58fa1d4282038e7f62ba2ba
+timeCreated: 1517111976
+>>>>>>> MadrugadaMuchoLoca
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
