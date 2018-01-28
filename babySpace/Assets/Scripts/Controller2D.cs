@@ -289,6 +289,7 @@ private void PegarItem(Collider2D collision)
         if (cribPart != TipoItem.vazio)
         {
             nave.AttachPart(cribPart);
+
             cribPart = TipoItem.vazio;
         }
     }
