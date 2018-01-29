@@ -26,6 +26,8 @@ public class Controller2D : MonoBehaviour {
     private Animator anim;
     public TipoItem cribPart = TipoItem.vazio;
 
+    public bool gotHelmet, gotAntena, gotPip = false;
+
 	public int numberEquip = 0;
 	public bool playBeep = true;
 
@@ -124,11 +126,17 @@ public class Controller2D : MonoBehaviour {
 		GameObject tempColliders = GameObject.FindGameObjectWithTag("ParentLimit");
 		Destroy(tempColliders);
 		AudioManager.instance.InterfAudio(true);
-        Controller2D.Player.Anim.SetLayerWeight(1, 0f);
-        Controller2D.Player.Anim.SetLayerWeight(2, 0f);
-        Controller2D.Player.Anim.SetLayerWeight(3, 0f);
-        Controller2D.Player.Anim.SetLayerWeight(4, 0f);
+        SelecionarLayerWeight(0);
 
+    }
+
+    public bool AllEquips()
+    {
+        if(gotPip && gotHelmet && gotAntena)
+        {
+            return true;
+        }
+        return false;
     }
 
     private void PegarItem(Collider2D collision)
@@ -190,18 +198,23 @@ public class Controller2D : MonoBehaviour {
 
     private void PegarAntena(PickupItem item)
     {
-       // Debug.Log("Peguei uma antena carai");
+        // Debug.Log("Peguei uma antena carai");
+        gotAntena = true;
         item.BeTaken();
+        AtualizarSprites();
+
 
     }
 
     private void PegarCapacete(PickupItem item)
     {
-      //  Debug.Log("Peguei um capacete carai");
+        //  Debug.Log("Peguei um capacete carai");
+        gotHelmet = true;
         anim.SetLayerWeight(4, 0f);
         anim.SetLayerWeight(2, 1f);
         helpPopUp.enabled = false;
         item.BeTaken();
+        AtualizarSprites();
 
     }
 
@@ -211,9 +224,58 @@ public class Controller2D : MonoBehaviour {
     }
     private void PegarConsole(PickupItem item)
     {
-      //  Debug.Log("Peguei um console carai");
+        //  Debug.Log("Peguei um console carai");
+        gotPip = true;
         item.BeTaken();
+        AtualizarSprites();
 
+
+    }
+
+    private void AtualizarSprites()
+    {
+        if (gotHelmet)
+        {
+            if (gotAntena)
+            {
+                if (gotPip)
+                {
+                    SelecionarLayerWeight(0);
+                }
+                else
+                {
+                    SelecionarLayerWeight(3);
+                }
+            }
+            else
+            {
+                if (gotPip)
+                {
+                    SelecionarLayerWeight(1);
+                }
+                else
+                {
+                    SelecionarLayerWeight(2);
+                }
+            }
+        }
+        else
+        {
+            SelecionarLayerWeight(4);
+        }
+    }
+
+    private void SelecionarLayerWeight(int layer_index)
+    {
+        for (int i = 1; i <= 4; i++) // zera todos os layers
+        {
+            anim.SetLayerWeight(i, 0f);
+        }
+        if (layer_index <= 4 && layer_index > 0)
+        {
+
+            anim.SetLayerWeight(layer_index, 1f); // seta o desejado
+        }
     }
 
 

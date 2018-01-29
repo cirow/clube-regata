@@ -55,7 +55,7 @@ public class HintSpot : MonoBehaviour {
 
 	void PlayHintMusic(bool play)
 	{
-		if(play)
+		if(play && Controller2D.Player.AllEquips())
 		{
 			if (!audioSource.isPlaying)
 			{
