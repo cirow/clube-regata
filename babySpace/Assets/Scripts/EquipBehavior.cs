@@ -47,7 +47,7 @@ public class EquipBehavior : PickupItem
 			}
 			float auxDist = Mathf.Abs(Vector3.Distance(player.transform.position, transform.position));
 			waitTime = Mathf.Lerp(startWaitTime, endWaitTime, 1 - (int)auxDist / maxDist);
-			audioSource.volume = Mathf.Lerp(0.6f, 0.03f, (int)auxDist / maxDist);
+			audioSource.volume = Mathf.Lerp(0.7f, 0.01f, (int)auxDist / maxDist);
 			
 			yield return new WaitForSeconds(waitTime);
 		}

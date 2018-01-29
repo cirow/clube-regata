@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4752538005447316}
   - component: {fileID: 58577735266700422}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: baloonTrig
   m_TagString: baloonTrig
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1792691438496994}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 83.61, y: 21.66, z: 0}
+  m_LocalPosition: {x: 81.41, y: 19.37, z: 0}
   m_LocalScale: {x: 0.25956374, y: 0.23666318, z: 1}
   m_Children:
   - {fileID: 4845014231034844}
@@ -118,7 +118,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.5
+  m_Radius: 4
 --- !u!58 &58577735266700422
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -133,7 +133,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.5
+  m_Radius: 4
 --- !u!58 &58804152173925570
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -148,7 +148,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 40
+  m_Radius: 60
 --- !u!82 &82241804160869646
 AudioSource:
   m_ObjectHideFlags: 1

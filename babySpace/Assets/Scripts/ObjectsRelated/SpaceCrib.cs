@@ -66,18 +66,21 @@ public class SpaceCrib : MonoBehaviour {
 	{
 		hasMotor = true;
 		motorChild.GetComponent<SpriteRenderer>().enabled = true;
+		IconsManagerUI.Instance.MarkMotor();
 	}
 
 	public void PutCombustivel()
 	{
 		hasFuel = true;
 		combChild.GetComponent<SpriteRenderer>().enabled = true;
+		IconsManagerUI.Instance.MarkFuel();
 	}
 
 	public void PutEspelho()
 	{
 		hasMirror = true;
 		espelhoChild.GetComponent<SpriteRenderer>().enabled = true;
+		IconsManagerUI.Instance.MarkMirror();
 	}
 
 

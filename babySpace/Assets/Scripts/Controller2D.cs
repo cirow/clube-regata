@@ -180,7 +180,7 @@ public class Controller2D : MonoBehaviour {
     {
         if(cribPart == TipoItem.vazio)
         {
-            Debug.Log("Peguei uma peça carai");
+           // Debug.Log("Peguei uma peça carai");
             cribPart = item.Item;
             item.BeTaken();
 			teleportBaloon.enabled = true;
@@ -190,14 +190,14 @@ public class Controller2D : MonoBehaviour {
 
     private void PegarAntena(PickupItem item)
     {
-        Debug.Log("Peguei uma antena carai");
+       // Debug.Log("Peguei uma antena carai");
         item.BeTaken();
 
     }
 
     private void PegarCapacete(PickupItem item)
     {
-        Debug.Log("Peguei um capacete carai");
+      //  Debug.Log("Peguei um capacete carai");
         anim.SetLayerWeight(4, 0f);
         anim.SetLayerWeight(2, 1f);
         helpPopUp.enabled = false;
@@ -211,7 +211,7 @@ public class Controller2D : MonoBehaviour {
     }
     private void PegarConsole(PickupItem item)
     {
-        Debug.Log("Peguei um console carai");
+      //  Debug.Log("Peguei um console carai");
         item.BeTaken();
 
     }
@@ -222,7 +222,7 @@ public class Controller2D : MonoBehaviour {
 		Collider2D objetoPerto = Physics2D.OverlapCircle(transform.position, 1.6f, LayerMask.GetMask("ActionLayer"));
 		if (objetoPerto != null && objetoPerto.tag == "HintSpot")
 		{
-			Debug.Log("HintSpot");
+			//Debug.Log("HintSpot");
 			ShowHint(objetoPerto.GetComponent<HintSpot>());
 		}
 		else
@@ -298,7 +298,7 @@ public class Controller2D : MonoBehaviour {
 
     private void RockPress(Rock pedra)
     {
-        Debug.Log("Pedra action");
+        //Debug.Log("Pedra action");
         pedra.ActivateSwitch();
     }
 

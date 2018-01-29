@@ -8,10 +8,10 @@ public class LevelManager : MonoBehaviour {
 	// Use this for initialization
 	void Update ()
 	{
-		if(Input.GetKeyDown(KeyCode.Escape))
-		{
-			Application.Quit();		
-		}
+		//if(Input.GetKeyDown(KeyCode.Escape))
+		//{
+		//	Application.Quit();		
+		//}
 	}
 
 	public void LoadLevel(string name)
