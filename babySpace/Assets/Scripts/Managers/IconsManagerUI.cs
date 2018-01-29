@@ -11,6 +11,9 @@ public class IconsManagerUI : MonoBehaviour {
 	public  Image motorIcon;
 	public  Image fuelIcon;
 	public  Image mirrorIcon;
+	public Image motorMark;
+	public Image fuelMark;
+	public Image mirrorMark;
 	public  Text posTextUI;
 
 	public bool m_gotMotor = false;
@@ -44,8 +47,20 @@ public class IconsManagerUI : MonoBehaviour {
         }
     }
 
+	public void MarkMirror()
+	{
+		mirrorMark.GetComponent<Image>().enabled = true;
+	}
+	public void MarkMotor()
+	{
+		motorMark.GetComponent<Image>().enabled = true;
+	}
+	public void MarkFuel()
+	{
+		fuelMark.GetComponent<Image>().enabled = true;
+	}
 
-    public void GetPart(TipoItem part)
+	public void GetPart(TipoItem part)
     {
         switch (part)
         {

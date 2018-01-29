@@ -44,12 +44,12 @@ public class HintSpot : MonoBehaviour {
 		//Debug.Log("distMax = " + Mathf.Abs(Vector3.Distance(player.transform.position, transform.position)));
 		//StartCoroutine(BeepInterval(endWaitTime));
 		//PlayHintMusic();
-		Debug.Log("Hint trigger enter");
+		//Debug.Log("Hint trigger enter");
 	}
 	public void PullTriggerExit2D(Collider2D collision)
 	{
 		playHint = false;
-		Debug.Log("Hint trigger exit");
+		//Debug.Log("Hint trigger exit");
 	}
 
 

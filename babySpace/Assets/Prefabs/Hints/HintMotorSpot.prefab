@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4004566562343970}
   - component: {fileID: 58474854017630122}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: baloonTrig
   m_TagString: baloonTrig
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.5
+  m_Radius: 4
 --- !u!58 &58474854017630122
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -133,7 +133,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.5
+  m_Radius: 4
 --- !u!58 &58919709407160950
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -148,7 +148,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 40
+  m_Radius: 60
 --- !u!82 &82974979800057244
 AudioSource:
   m_ObjectHideFlags: 1

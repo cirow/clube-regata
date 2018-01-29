@@ -16,7 +16,7 @@ public class HintCollider : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D collision)
 	{
 		gameObject.GetComponentInParent<HintSpot>().PullTriggerEnter2D(collision);
-		Debug.Log("Hint trigger enter");
+		//Debug.Log("Hint trigger enter");
 	}
 
 	private void OnTriggerExit2D(Collider2D collision)

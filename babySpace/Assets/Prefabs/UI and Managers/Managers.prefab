@@ -143,6 +143,9 @@ MonoBehaviour:
   motorIcon: {fileID: 0}
   fuelIcon: {fileID: 0}
   mirrorIcon: {fileID: 0}
+  motorMark: {fileID: 0}
+  fuelMark: {fileID: 0}
+  mirrorMark: {fileID: 0}
   posTextUI: {fileID: 0}
   m_gotMotor: 0
   m_gotFuel: 0
