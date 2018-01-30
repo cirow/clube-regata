@@ -147,6 +147,7 @@ MonoBehaviour:
   fuelMark: {fileID: 0}
   mirrorMark: {fileID: 0}
   posTextUI: {fileID: 0}
+  ajudaDosNoob: {fileID: 0}
   m_gotMotor: 0
   m_gotFuel: 0
   m_gotMirror: 0
@@ -162,7 +163,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   consoleCanvas: {fileID: 0}
-  hintText: {fileID: 0}
+  hint1Text: {fileID: 0}
+  hint2Text: {fileID: 0}
+  hint3Text: {fileID: 0}
   coordText: {fileID: 0}
   isHint: 0
 --- !u!114 &114746462296080940

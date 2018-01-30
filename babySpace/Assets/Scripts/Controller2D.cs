@@ -27,7 +27,8 @@ public class Controller2D : MonoBehaviour {
     public TipoItem cribPart = TipoItem.vazio;
 
     public bool gotHelmet, gotAntena, gotPip = false;
-
+	public bool gotHint1, gotHint2, gotHint3 = false;
+	public bool teleportEnabled = false;
 	public int numberEquip = 0;
 	public bool playBeep = true;
 
@@ -53,6 +54,7 @@ public class Controller2D : MonoBehaviour {
         anim = GetComponent<Animator>();
 		consoleManager = GameObject.FindGameObjectWithTag("ConsoleManager").GetComponent<ConsoleManager>();
         equipBaloon.enabled = false;
+		
 	}
 
 
@@ -79,7 +81,8 @@ public class Controller2D : MonoBehaviour {
         }
     }
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
         //  playerRigidBody.velocity = new Vector2(PlayerInput.Instance.MoveX, PlayerInput.Instance.MoveY);
 
         //anim.SetFloat("MoveX", PlayerInput.Instance.MoveX);
@@ -107,7 +110,7 @@ public class Controller2D : MonoBehaviour {
 		{
 			SearchAction();
 		}
-		if (PlayerInput.Instance.TeleportButton)
+		if (PlayerInput.Instance.TeleportButton && teleportEnabled)
 		{
 			anim.Play("anim_warp");
 		}
@@ -127,13 +130,16 @@ public class Controller2D : MonoBehaviour {
 		Destroy(tempColliders);
 		AudioManager.instance.InterfAudio(true);
         SelecionarLayerWeight(0);
+		teleportEnabled = true;
+		IconsManagerUI.Instance.ShowObjective(1);
 
-    }
+	}
 
     public bool AllEquips()
     {
         if(gotPip && gotHelmet && gotAntena)
         {
+			
             return true;
         }
         return false;
@@ -332,24 +338,30 @@ public class Controller2D : MonoBehaviour {
 		if (hintSpot.item == TipoItem.motor)
 		{
 			consoleManager.isHint = true;
+			gotHint1 = true;
 			//consoleManager.consoleCanvas.enabled = true;
-			consoleManager.hintText.text = "Hint = Orange";
-			consoleManager.coordText.text = "Coord (x:y) = 64:37";
-			
+			//consoleManager.hintText.text = "Hint = Orange";
+			//consoleManager.coordText.text = "Coord (x:y) = 64:37";
+			//consoleManager.OpenConsole();
+
 		}
 		else if(hintSpot.item == TipoItem.espelho)
 		{
 			consoleManager.isHint = true;
-			consoleManager.hintText.text = "Hint = 6134";
-			consoleManager.coordText.text = "Coord (x:y) = 50:4";
+			gotHint2 = true;
+			//consoleManager.hintText.text = "Hint = 6134";
+			//consoleManager.coordText.text = "Coord (x:y) = 50:4";
 			//consoleManager.consoleCanvas.enabled = true;
+			//consoleManager.OpenConsole();
 		}
 		else if(hintSpot.item == TipoItem.combustivel)
 		{
 			consoleManager.isHint = true;
-			consoleManager.hintText.text = "Hint = Happy Bday";
-			consoleManager.coordText.text = "Coord (x:y) = 12:12";
+			gotHint3 = true;
+			//consoleManager.hintText.text = "Hint = GGJ10Y";
+			//consoleManager.coordText.text = "Coord (x:y) = 12:12";
 			//consoleManager.consoleCanvas.enabled = true;
+			//consoleManager.OpenConsole();
 		}
 		else
 		{
