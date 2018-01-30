@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class IconsManagerUI : MonoBehaviour {
 
 
-    private static IconsManagerUI instance = null;
+    public static IconsManagerUI instance = null;
 
 	public  Image motorIcon;
 	public  Image fuelIcon;
@@ -15,6 +15,7 @@ public class IconsManagerUI : MonoBehaviour {
 	public Image fuelMark;
 	public Image mirrorMark;
 	public  Text posTextUI;
+	public Text ajudaDosNoob;
 
 	public bool m_gotMotor = false;
 	public bool m_gotFuel = false;
@@ -85,6 +86,18 @@ public class IconsManagerUI : MonoBehaviour {
                 break;
         }
     }
+
+	public void ShowObjective(int index)
+	{
+		if(index == 0)
+		{
+			ajudaDosNoob.text = "Objective: Find all your equipment.";
+		}
+		else if(index == 1)
+		{
+			ajudaDosNoob.text = "Objective: Solve the puzzles to find the missing parts of the ship and then place them back.\nYou can find hints in the map to help.";
+		}
+	}
 	
 	// Update is called once per frame
 	void Update ()
