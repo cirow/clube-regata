@@ -45689,6 +45689,16 @@ Prefab:
       propertyPath: warpPoint
       value: 
       objectReference: {fileID: 767106922}
+    - target: {fileID: 61386804331178372, guid: 6631ee2602e12ce4aae38eccf823d0ae,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.2538462
+      objectReference: {fileID: 0}
+    - target: {fileID: 61386804331178372, guid: 6631ee2602e12ce4aae38eccf823d0ae,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.75384617
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6631ee2602e12ce4aae38eccf823d0ae, type: 2}
   m_IsPrefabParent: 0
