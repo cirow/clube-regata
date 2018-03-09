@@ -45699,6 +45699,11 @@ Prefab:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.75384617
       objectReference: {fileID: 0}
+    - target: {fileID: 114967900539336406, guid: 6631ee2602e12ce4aae38eccf823d0ae,
+        type: 2}
+      propertyPath: teleportEnabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6631ee2602e12ce4aae38eccf823d0ae, type: 2}
   m_IsPrefabParent: 0

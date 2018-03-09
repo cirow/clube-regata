@@ -112,7 +112,7 @@ public class Controller2D : MonoBehaviour {
 		}
 		if (PlayerInput.Instance.TeleportButton && teleportEnabled)
 		{
-			anim.Play("anim_warp");
+            StartTeleport();
 		}
 
 
@@ -391,9 +391,25 @@ public class Controller2D : MonoBehaviour {
     {
         transform.position = warpPoint.position;
 		teleportBaloon.enabled = false;
-        anim.SetTrigger("FinishTeleport");
+        anim.Play("anim_warp_reverse");
+
 
     }
+
+    private void EndTeleport()
+    {
+        anim.SetTrigger("FinishTeleportAnimation");
+        PlayerInput.Instance.UnfreezePlayer();
+
+    }
+
+    private void StartTeleport()
+    {
+        anim.Play("anim_warp");
+        PlayerInput.Instance.FreezePlayer();
+
+    }
+
     public void PlayWarpSound()
     {
         GetComponent<AudioSource>().Play();

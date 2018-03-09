@@ -50,14 +50,28 @@ public class PlayerInput : MonoBehaviour {
     {
         get
         {
-            return moveX;
+            if (canMove)
+            {
+                return moveX;
+            }
+            else
+            {
+                return 0f;
+            }
         } 
     }
     public float MoveY
     {
         get
         {
-            return moveY;
+            if (canMove)
+            {
+                return moveY;
+            }
+            else
+            {
+                return 0f;
+            }
         }
     }
 
@@ -75,6 +89,16 @@ public class PlayerInput : MonoBehaviour {
         {
             return teleportButton;
         }
+    }
+
+    public void FreezePlayer()
+    {
+        canMove = false;
+    }
+
+    public void UnfreezePlayer()
+    {
+        canMove = true;
     }
 
     // Update is called once per frame
