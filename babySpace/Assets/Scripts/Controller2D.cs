@@ -389,8 +389,10 @@ public class Controller2D : MonoBehaviour {
 
     private void Teleport()
     {
+      //  transform.localScale = new Vector2(1, 1);
         transform.position = warpPoint.position;
 		teleportBaloon.enabled = false;
+       // transform.localScale = new Vector2(1, 10f);
         anim.Play("anim_warp_reverse");
 
 
@@ -399,6 +401,7 @@ public class Controller2D : MonoBehaviour {
     private void EndTeleport()
     {
         anim.SetTrigger("FinishTeleportAnimation");
+        playerCollider.enabled = true;
         PlayerInput.Instance.UnfreezePlayer();
 
     }
@@ -407,8 +410,27 @@ public class Controller2D : MonoBehaviour {
     {
         anim.Play("anim_warp");
         PlayerInput.Instance.FreezePlayer();
+        playerCollider.enabled = false;
 
     }
+    private void StartScaleTeleport(float y_scl)
+    {
+        transform.localScale = new Vector3(1, Mathf.Lerp(transform.localScale.y, y_scl, 1f), 1);
+
+    }
+
+    private void StopScaleTeleport(float step)
+    {
+        transform.localScale = new Vector3(1, Mathf.Lerp(transform.localScale.y, 1f, step), 1);
+
+    }
+
+    //private IEnumerator ScaleTeleport(float y_value)
+    //{
+    //    transform.localScale = new Vector3(1, Mathf.Lerp(transform.localScale.y, 10f, 0.5f), 1);
+
+    //    yield return new WaitForFixedUpdate();
+    //}
 
     public void PlayWarpSound()
     {
