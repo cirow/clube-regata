@@ -403,6 +403,8 @@ public class Controller2D : MonoBehaviour {
         anim.SetTrigger("FinishTeleportAnimation");
         playerCollider.enabled = true;
         PlayerInput.Instance.UnfreezePlayer();
+        teleportEnabled = true;
+
 
     }
 
@@ -411,6 +413,7 @@ public class Controller2D : MonoBehaviour {
         anim.Play("anim_warp");
         PlayerInput.Instance.FreezePlayer();
         playerCollider.enabled = false;
+        teleportEnabled = false;
 
     }
     private void StartScaleTeleport(float y_scl)

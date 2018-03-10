@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b341dc0834f32d8408c0d9331a5b50ed
-timeCreated: 1517143677
+timeCreated: 1520697001
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -12,6 +12,7 @@ TextureImporter:
     21300010: teleport_spritesheet_5
     21300012: teleport_spritesheet_6
     21300014: teleport_spritesheet_7
+    21300016: teleport_spritesheet_8
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -213,6 +214,20 @@ TextureImporter:
         y: 18
         width: 11
         height: 174
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: teleport_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 60
+        width: 5
+        height: 32
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
