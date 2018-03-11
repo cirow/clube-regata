@@ -394,7 +394,7 @@ MonoBehaviour:
   gotHint1: 0
   gotHint2: 0
   gotHint3: 0
-  teleportEnabled: 1
+  teleportEnabled: 0
   numberEquip: 0
   playBeep: 1
 --- !u!198 &198869388544058052

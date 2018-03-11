@@ -126,14 +126,12 @@ public class Controller2D : MonoBehaviour {
 	{
 		//Tem todo o equipamento entao toca o audio da interferencia
 		//Destroi colisores que limitam o inicio
-		GameObject tempColliders = GameObject.FindGameObjectWithTag("ParentLimit");
-		Destroy(tempColliders);
-		AudioManager.instance.InterfAudio(true);
-        SelecionarLayerWeight(0);
-		teleportEnabled = true;
-		IconsManagerUI.Instance.ShowObjective(1);
 
-	}
+        SelecionarLayerWeight(0);
+        QuestManager.Instance.TodosOsEquips();
+
+
+    }
 
     public bool AllEquips()
     {
@@ -145,6 +143,8 @@ public class Controller2D : MonoBehaviour {
         return false;
     }
 
+
+
     private void PegarItem(Collider2D collision)
     {
         if(collision.tag == "PickUpItem")
@@ -154,7 +154,8 @@ public class Controller2D : MonoBehaviour {
             switch (itemPego.Item) {
                 case TipoItem.antena:
 					numberEquip++;
-					if (numberEquip >= 3)
+                    gotAntena = true;
+					if (AllEquips())
 					{
 						playBeep = false;
 						GotAllEquips();
@@ -164,8 +165,9 @@ public class Controller2D : MonoBehaviour {
 
                 case TipoItem.capacete:
 					numberEquip++;
+                    gotHelmet = true;
 					gameObject.GetComponent<PlayerInput>().canMove = true;
-					if (numberEquip >= 3)
+					if (AllEquips())
 					{
 						playBeep = false;
 						GotAllEquips();
@@ -174,7 +176,8 @@ public class Controller2D : MonoBehaviour {
                     break;
                 case TipoItem.console:
 					numberEquip++;
-					if(numberEquip >= 3)
+                    gotPip = true;
+					if(AllEquips())
 					{
 
 						playBeep = false;
