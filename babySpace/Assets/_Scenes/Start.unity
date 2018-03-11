@@ -542,7 +542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backgroundAudios:
   - {fileID: 8300000, guid: 77a0f851c10ca4b458674c53d5005ef0, type: 3}
-  - {fileID: 8300000, guid: e80b063c42956b946aca6cfde14675d3, type: 3}
+  - {fileID: 8300000, guid: fe847280366051240b6cce5f45e40348, type: 3}
   detectAudios:
   - {fileID: 8300000, guid: 8a1805d34965853428d78b1e0fe2b738, type: 3}
   - {fileID: 8300000, guid: fed5d63eb454c3a4583901c6ab72ae32, type: 3}
