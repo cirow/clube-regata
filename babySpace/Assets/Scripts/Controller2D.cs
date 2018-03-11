@@ -154,36 +154,38 @@ public class Controller2D : MonoBehaviour {
             switch (itemPego.Item) {
                 case TipoItem.antena:
 					numberEquip++;
-                    gotAntena = true;
-					if (AllEquips())
+                    //gotAntena = true;
+                    PegarAntena(itemPego);
+                    if (AllEquips())
 					{
 						playBeep = false;
 						GotAllEquips();
 					}
-					PegarAntena(itemPego);
                     break;
 
                 case TipoItem.capacete:
 					numberEquip++;
-                    gotHelmet = true;
+                    //gotHelmet = true;
 					gameObject.GetComponent<PlayerInput>().canMove = true;
-					if (AllEquips())
+                    PegarCapacete(itemPego);
+
+                    if (AllEquips())
 					{
 						playBeep = false;
 						GotAllEquips();
 					}
-					PegarCapacete(itemPego);
                     break;
                 case TipoItem.console:
 					numberEquip++;
-                    gotPip = true;
-					if(AllEquips())
+                    //gotPip = true;
+                    PegarConsole(itemPego);
+
+                    if (AllEquips())
 					{
 
 						playBeep = false;
 						GotAllEquips();
 					}
-                    PegarConsole(itemPego);
                     break;
                 default:
                     PegarPart(itemPego);
