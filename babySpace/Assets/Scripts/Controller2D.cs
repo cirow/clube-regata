@@ -154,6 +154,7 @@ public class Controller2D : MonoBehaviour {
             switch (itemPego.Item) {
                 case TipoItem.antena:
 					numberEquip++;
+                    gotAntena = true;
 					if (AllEquips())
 					{
 						playBeep = false;
@@ -164,6 +165,7 @@ public class Controller2D : MonoBehaviour {
 
                 case TipoItem.capacete:
 					numberEquip++;
+                    gotHelmet = true;
 					gameObject.GetComponent<PlayerInput>().canMove = true;
 					if (AllEquips())
 					{
@@ -174,6 +176,7 @@ public class Controller2D : MonoBehaviour {
                     break;
                 case TipoItem.console:
 					numberEquip++;
+                    gotPip = true;
 					if(AllEquips())
 					{
 

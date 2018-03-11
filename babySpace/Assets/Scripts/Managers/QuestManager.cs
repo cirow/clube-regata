@@ -46,6 +46,7 @@ public class QuestManager : MonoBehaviour {
 
     public void StageRadio()
     {
+        OpenWall();
         AudioManager.instance.InterfAudio(true);
         IconsManagerUI.Instance.ShowObjective(1);
 
@@ -55,7 +56,7 @@ public class QuestManager : MonoBehaviour {
     public void TodosOsEquips()
     {
         Controller2D.Player.teleportEnabled = true;
-        OpenWall();
+        
         StageRadio();
     }
 }
