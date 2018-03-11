@@ -28,6 +28,7 @@ public class QuestManager : MonoBehaviour {
             Destroy(gameObject);
             Debug.Log("Trying to instantiate 2 Puzzle Manager");
         }
+		AudioManager.instance.WindAudio(true);
 
     }
 

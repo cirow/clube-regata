@@ -44,14 +44,17 @@ public class AudioManager : MonoBehaviour {
 			Debug.Log("error getting audio sources");
 		}
 		VictoryAudio(true);
-		InterfAudio(false);
-		WindAudio(false);
 	}
 
 
 
 	public void WindAudio(bool play)
 	{
+		if(audioSources[1].isPlaying)
+		{
+			audioSources[1].Stop();
+			Debug.Log("stop victory start wind");
+		}
 		if (play)
 		{
 			audioSources[0].clip = backgroundAudios[0];
@@ -82,7 +85,12 @@ public class AudioManager : MonoBehaviour {
 
 	public void VictoryAudio(bool play)
 	{
-		if(play)
+		if (audioSources[0].isPlaying)
+		{
+			Debug.Log("stop wind start victory");
+			audioSources[0].Stop();
+		}
+		if (play)
 		{
 			Debug.Log("victory audio on");
 			audioSources[1].clip = backgroundAudios[1];
