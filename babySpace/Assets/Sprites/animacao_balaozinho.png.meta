@@ -1,6 +1,10 @@
 fileFormatVersion: 2
 guid: d2d2fd0811bfdff4c92d3c3931843073
+<<<<<<< Updated upstream
 timeCreated: 1520800326
+=======
+timeCreated: 1520799916
+>>>>>>> Stashed changes
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -89,8 +93,13 @@ TextureImporter:
         serializedVersion: 2
         x: 130
         y: 2
+<<<<<<< Updated upstream
         width: 126
         height: 63
+=======
+        width: 125
+        height: 62
+>>>>>>> Stashed changes
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,7 +127,11 @@ TextureImporter:
         x: 18
         y: 2
         width: 15
+<<<<<<< Updated upstream
         height: 13
+=======
+        height: 14
+>>>>>>> Stashed changes
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,7 +145,11 @@ TextureImporter:
         x: 36
         y: 2
         width: 92
+<<<<<<< Updated upstream
         height: 49
+=======
+        height: 47
+>>>>>>> Stashed changes
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
